@@ -1,0 +1,1284 @@
+Model run using Apollo for R, version 0.2.4 on Windows by fritz 
+www.ApolloChoiceModelling.com
+
+Model name                       : Apollo_Nested_Model
+Model description                : Simple NL model on penalty data
+Model run at                     : 2021-09-19 18:12:39
+Estimation method                : bfgs
+Model diagnosis                  : iteration limit exceeded 
+Number of individuals            : 485
+Number of rows in database       : 2358
+Number of modelled outcomes      : 2358
+
+Number of cores used             :  1 
+Model without mixing
+
+LL(start)                        : -4224.969
+LL(0)                            : -4224.969
+LL(final)                        : -3454.278
+Rho-square (0)                   :  0.1824 
+Adj.Rho-square (0)               :  0.164 
+AIC                              :  7064.56 
+BIC                              :  7514.27 
+
+
+Estimated parameters             :  78
+Time taken (hh:mm:ss)            :  00:05:35.56 
+     pre-estimation              :  00:00:2.36 
+     estimation                  :  00:05:33.17 
+     post-estimation             :  00:00:0.04 
+Iterations                       :  202 (iteration limit exceeded ) 
+
+Estimates:
+             Estimate        s.e.   t.rat.(0)    Rob.s.e.
+asc_TL       1.465094          NA          NA          NA
+asc_TC       0.248071          NA          NA          NA
+asc_TR       0.522162          NA          NA          NA
+asc_DL      -0.408281          NA          NA          NA
+asc_DC       0.000000          NA          NA          NA
+asc_DR       1.338064          NA          NA          NA
+b_foot1      0.064778          NA          NA          NA
+b_foot2      0.000000          NA          NA          NA
+b_foot3     -0.622881          NA          NA          NA
+b_moveGK1    0.170582          NA          NA          NA
+b_moveGK2   -0.045474          NA          NA          NA
+b_moveGK3    0.814053          NA          NA          NA
+b_moveGK4    0.432088          NA          NA          NA
+b_moveGK5    0.000000          NA          NA          NA
+b_moveGK6   -0.426738          NA          NA          NA
+b_GKS1       0.097310          NA          NA          NA
+b_GKS2       0.022584          NA          NA          NA
+b_GKS3      -1.631950          NA          NA          NA
+b_GKS4      -0.132922          NA          NA          NA
+b_GKS5       0.000000          NA          NA          NA
+b_GKS6       0.147491          NA          NA          NA
+b_IS1        0.133961          NA          NA          NA
+b_IS2       -0.068003          NA          NA          NA
+b_IS3        2.455203          NA          NA          NA
+b_IS4        0.524706          NA          NA          NA
+b_IS5        0.000000          NA          NA          NA
+b_IS6       -0.081190          NA          NA          NA
+b_comL1     -0.294588          NA          NA          NA
+b_comL2     -0.119855          NA          NA          NA
+b_comL3      0.129888          NA          NA          NA
+b_comL4      0.016605          NA          NA          NA
+b_comL5      0.000000          NA          NA          NA
+b_comL6      0.119445          NA          NA          NA
+b_HGK1       0.022428          NA          NA          NA
+b_HGK2       0.006680          NA          NA          NA
+b_HGK3      -0.060104          NA          NA          NA
+b_HGK4      -0.017769          NA          NA          NA
+b_HGK5       0.000000          NA          NA          NA
+b_HGK6       0.048616          NA          NA          NA
+b_dec1       0.592177          NA          NA          NA
+b_dec2      -0.265992          NA          NA          NA
+b_dec3       2.248485          NA          NA          NA
+b_dec4       0.406383          NA          NA          NA
+b_dec5       0.000000          NA          NA          NA
+b_dec6      -0.078985          NA          NA          NA
+b_lp1        0.213908          NA          NA          NA
+b_lp2       -0.143597          NA          NA          NA
+b_lp3       -0.854101          NA          NA          NA
+b_lp4        0.053374          NA          NA          NA
+b_lp5        0.000000          NA          NA          NA
+b_lp6        0.640805          NA          NA          NA
+b_latr1      0.184122          NA          NA          NA
+b_latr2      0.247603          NA          NA          NA
+b_latr3      1.868416          NA          NA          NA
+b_latr4      0.307298          NA          NA          NA
+b_latr5      0.000000          NA          NA          NA
+b_latr6     -0.149284          NA          NA          NA
+b_ladr1     -0.126072          NA          NA          NA
+b_ladr2     -0.003555          NA          NA          NA
+b_ladr3     -0.614612          NA          NA          NA
+b_ladr4      0.052410          NA          NA          NA
+b_ladr5      0.000000          NA          NA          NA
+b_ladr6     -0.188761          NA          NA          NA
+b_sr1      -37.913051          NA          NA          NA
+b_sr3     -236.269561          NA          NA          NA
+b_perc       0.317385          NA          NA          NA
+b_rnog1     -0.166675          NA          NA          NA
+b_rnog2     -0.242838          NA          NA          NA
+b_rnog3      2.358544          NA          NA          NA
+b_rnog4      0.015903          NA          NA          NA
+b_rnog5      0.000000          NA          NA          NA
+b_rnog6     -0.394084          NA          NA          NA
+b_solsbg1    0.107338          NA          NA          NA
+b_solsbg2   -0.151860          NA          NA          NA
+b_solsbg3   -0.313984          NA          NA          NA
+b_solsbg4   -0.201632          NA          NA          NA
+b_solsbg5    0.000000          NA          NA          NA
+b_solsbg6   -0.057784          NA          NA          NA
+b_nmovGK1    0.438477          NA          NA          NA
+b_nmovGK2   -0.146947          NA          NA          NA
+b_nmovGK3    2.624079          NA          NA          NA
+b_nmovGK4    0.781771          NA          NA          NA
+b_nmovGK5    0.000000          NA          NA          NA
+b_nmovGK6   -1.065023          NA          NA          NA
+b_def1      -0.023611          NA          NA          NA
+b_def2       0.264761          NA          NA          NA
+b_def3       0.827570          NA          NA          NA
+b_def4       0.111325          NA          NA          NA
+b_def5       0.000000          NA          NA          NA
+b_def6      -0.291644          NA          NA          NA
+lambda_L     0.565486          NA          NA          NA
+lambda_C     0.243076          NA          NA          NA
+lambda_R     4.586680          NA          NA          NA
+          Rob.t.rat.(0)
+asc_TL               NA
+asc_TC               NA
+asc_TR               NA
+asc_DL               NA
+asc_DC               NA
+asc_DR               NA
+b_foot1              NA
+b_foot2              NA
+b_foot3              NA
+b_moveGK1            NA
+b_moveGK2            NA
+b_moveGK3            NA
+b_moveGK4            NA
+b_moveGK5            NA
+b_moveGK6            NA
+b_GKS1               NA
+b_GKS2               NA
+b_GKS3               NA
+b_GKS4               NA
+b_GKS5               NA
+b_GKS6               NA
+b_IS1                NA
+b_IS2                NA
+b_IS3                NA
+b_IS4                NA
+b_IS5                NA
+b_IS6                NA
+b_comL1              NA
+b_comL2              NA
+b_comL3              NA
+b_comL4              NA
+b_comL5              NA
+b_comL6              NA
+b_HGK1               NA
+b_HGK2               NA
+b_HGK3               NA
+b_HGK4               NA
+b_HGK5               NA
+b_HGK6               NA
+b_dec1               NA
+b_dec2               NA
+b_dec3               NA
+b_dec4               NA
+b_dec5               NA
+b_dec6               NA
+b_lp1                NA
+b_lp2                NA
+b_lp3                NA
+b_lp4                NA
+b_lp5                NA
+b_lp6                NA
+b_latr1              NA
+b_latr2              NA
+b_latr3              NA
+b_latr4              NA
+b_latr5              NA
+b_latr6              NA
+b_ladr1              NA
+b_ladr2              NA
+b_ladr3              NA
+b_ladr4              NA
+b_ladr5              NA
+b_ladr6              NA
+b_sr1                NA
+b_sr3                NA
+b_perc               NA
+b_rnog1              NA
+b_rnog2              NA
+b_rnog3              NA
+b_rnog4              NA
+b_rnog5              NA
+b_rnog6              NA
+b_solsbg1            NA
+b_solsbg2            NA
+b_solsbg3            NA
+b_solsbg4            NA
+b_solsbg5            NA
+b_solsbg6            NA
+b_nmovGK1            NA
+b_nmovGK2            NA
+b_nmovGK3            NA
+b_nmovGK4            NA
+b_nmovGK5            NA
+b_nmovGK6            NA
+b_def1               NA
+b_def2               NA
+b_def3               NA
+b_def4               NA
+b_def5               NA
+b_def6               NA
+lambda_L             NA
+lambda_C             NA
+lambda_R             NA
+
+Nesting structure for NL model component :
+Nest: root (1)
+|-Nest: L (0.5655)
+|  |-Alternative: TL
+|  '-Alternative: DL
+|-Nest: C (0.2431)
+|  |-Alternative: TC
+|  '-Alternative: DC
+'-Nest: R (4.5867)
+   |-Alternative: TR
+   '-Alternative: DR
+
+
+Overview of choices for NL model component :
+                                      TL     TC      TR      DL
+Times available                  2358.00 2358.0 2358.00 2358.00
+Times chosen                      232.00  132.0  212.00  878.00
+Percentage chosen overall           9.84    5.6    8.99   37.23
+Percentage chosen when available    9.84    5.6    8.99   37.23
+                                      DC      DR
+Times available                  2358.00 2358.00
+Times chosen                      161.00  743.00
+Percentage chosen overall           6.83   31.51
+Percentage chosen when available    6.83   31.51
+
+
+Classical covariance matrix:
+             asc_TL    asc_TC    asc_TR    asc_DL    asc_DR
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_foot1   b_foot3 b_moveGK1 b_moveGK2 b_moveGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_moveGK4 b_moveGK6    b_GKS1    b_GKS2    b_GKS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_GKS4    b_GKS6     b_IS1     b_IS2     b_IS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_IS4     b_IS6   b_comL1   b_comL2   b_comL3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_comL4   b_comL6    b_HGK1    b_HGK2    b_HGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_HGK4    b_HGK6    b_dec1    b_dec2    b_dec3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_dec4    b_dec6     b_lp1     b_lp2     b_lp3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_lp4     b_lp6   b_latr1   b_latr2   b_latr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_latr4   b_latr6   b_ladr1   b_ladr2   b_ladr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_ladr4   b_ladr6     b_sr1     b_sr3    b_perc
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_rnog1   b_rnog2   b_rnog3   b_rnog4   b_rnog6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_solsbg1 b_solsbg2 b_solsbg3 b_solsbg4 b_solsbg6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_nmovGK1 b_nmovGK2 b_nmovGK3 b_nmovGK4 b_nmovGK6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_def1    b_def2    b_def3    b_def4    b_def6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+           lambda_L  lambda_C  lambda_R
+asc_TL           NA        NA        NA
+asc_TC           NA        NA        NA
+asc_TR           NA        NA        NA
+asc_DL           NA        NA        NA
+asc_DR           NA        NA        NA
+b_foot1          NA        NA        NA
+b_foot3          NA        NA        NA
+b_moveGK1        NA        NA        NA
+b_moveGK2        NA        NA        NA
+b_moveGK3        NA        NA        NA
+b_moveGK4        NA        NA        NA
+b_moveGK6        NA        NA        NA
+ [ reached getOption("max.print") -- omitted 66 rows ]
+
+Robust covariance matrix:
+             asc_TL    asc_TC    asc_TR    asc_DL    asc_DR
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_foot1   b_foot3 b_moveGK1 b_moveGK2 b_moveGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_moveGK4 b_moveGK6    b_GKS1    b_GKS2    b_GKS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_GKS4    b_GKS6     b_IS1     b_IS2     b_IS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_IS4     b_IS6   b_comL1   b_comL2   b_comL3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_comL4   b_comL6    b_HGK1    b_HGK2    b_HGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_HGK4    b_HGK6    b_dec1    b_dec2    b_dec3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_dec4    b_dec6     b_lp1     b_lp2     b_lp3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_lp4     b_lp6   b_latr1   b_latr2   b_latr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_latr4   b_latr6   b_ladr1   b_ladr2   b_ladr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_ladr4   b_ladr6     b_sr1     b_sr3    b_perc
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_rnog1   b_rnog2   b_rnog3   b_rnog4   b_rnog6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_solsbg1 b_solsbg2 b_solsbg3 b_solsbg4 b_solsbg6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_nmovGK1 b_nmovGK2 b_nmovGK3 b_nmovGK4 b_nmovGK6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_def1    b_def2    b_def3    b_def4    b_def6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+           lambda_L  lambda_C  lambda_R
+asc_TL           NA        NA        NA
+asc_TC           NA        NA        NA
+asc_TR           NA        NA        NA
+asc_DL           NA        NA        NA
+asc_DR           NA        NA        NA
+b_foot1          NA        NA        NA
+b_foot3          NA        NA        NA
+b_moveGK1        NA        NA        NA
+b_moveGK2        NA        NA        NA
+b_moveGK3        NA        NA        NA
+b_moveGK4        NA        NA        NA
+b_moveGK6        NA        NA        NA
+ [ reached getOption("max.print") -- omitted 66 rows ]
+
+Classical correlation matrix:
+             asc_TL    asc_TC    asc_TR    asc_DL    asc_DR
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_foot1   b_foot3 b_moveGK1 b_moveGK2 b_moveGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_moveGK4 b_moveGK6    b_GKS1    b_GKS2    b_GKS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_GKS4    b_GKS6     b_IS1     b_IS2     b_IS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_IS4     b_IS6   b_comL1   b_comL2   b_comL3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_comL4   b_comL6    b_HGK1    b_HGK2    b_HGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_HGK4    b_HGK6    b_dec1    b_dec2    b_dec3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_dec4    b_dec6     b_lp1     b_lp2     b_lp3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_lp4     b_lp6   b_latr1   b_latr2   b_latr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_latr4   b_latr6   b_ladr1   b_ladr2   b_ladr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_ladr4   b_ladr6     b_sr1     b_sr3    b_perc
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_rnog1   b_rnog2   b_rnog3   b_rnog4   b_rnog6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_solsbg1 b_solsbg2 b_solsbg3 b_solsbg4 b_solsbg6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_nmovGK1 b_nmovGK2 b_nmovGK3 b_nmovGK4 b_nmovGK6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_def1    b_def2    b_def3    b_def4    b_def6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+           lambda_L  lambda_C  lambda_R
+asc_TL           NA        NA        NA
+asc_TC           NA        NA        NA
+asc_TR           NA        NA        NA
+asc_DL           NA        NA        NA
+asc_DR           NA        NA        NA
+b_foot1          NA        NA        NA
+b_foot3          NA        NA        NA
+b_moveGK1        NA        NA        NA
+b_moveGK2        NA        NA        NA
+b_moveGK3        NA        NA        NA
+b_moveGK4        NA        NA        NA
+b_moveGK6        NA        NA        NA
+ [ reached getOption("max.print") -- omitted 66 rows ]
+
+Robust correlation matrix:
+             asc_TL    asc_TC    asc_TR    asc_DL    asc_DR
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_foot1   b_foot3 b_moveGK1 b_moveGK2 b_moveGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_moveGK4 b_moveGK6    b_GKS1    b_GKS2    b_GKS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_GKS4    b_GKS6     b_IS1     b_IS2     b_IS3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_IS4     b_IS6   b_comL1   b_comL2   b_comL3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_comL4   b_comL6    b_HGK1    b_HGK2    b_HGK3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_HGK4    b_HGK6    b_dec1    b_dec2    b_dec3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_dec4    b_dec6     b_lp1     b_lp2     b_lp3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+              b_lp4     b_lp6   b_latr1   b_latr2   b_latr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_latr4   b_latr6   b_ladr1   b_ladr2   b_ladr3
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_ladr4   b_ladr6     b_sr1     b_sr3    b_perc
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+            b_rnog1   b_rnog2   b_rnog3   b_rnog4   b_rnog6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_solsbg1 b_solsbg2 b_solsbg3 b_solsbg4 b_solsbg6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+          b_nmovGK1 b_nmovGK2 b_nmovGK3 b_nmovGK4 b_nmovGK6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+             b_def1    b_def2    b_def3    b_def4    b_def6
+asc_TL           NA        NA        NA        NA        NA
+asc_TC           NA        NA        NA        NA        NA
+asc_TR           NA        NA        NA        NA        NA
+asc_DL           NA        NA        NA        NA        NA
+asc_DR           NA        NA        NA        NA        NA
+b_foot1          NA        NA        NA        NA        NA
+b_foot3          NA        NA        NA        NA        NA
+b_moveGK1        NA        NA        NA        NA        NA
+b_moveGK2        NA        NA        NA        NA        NA
+b_moveGK3        NA        NA        NA        NA        NA
+b_moveGK4        NA        NA        NA        NA        NA
+b_moveGK6        NA        NA        NA        NA        NA
+           lambda_L  lambda_C  lambda_R
+asc_TL           NA        NA        NA
+asc_TC           NA        NA        NA
+asc_TR           NA        NA        NA
+asc_DL           NA        NA        NA
+asc_DR           NA        NA        NA
+b_foot1          NA        NA        NA
+b_foot3          NA        NA        NA
+b_moveGK1        NA        NA        NA
+b_moveGK2        NA        NA        NA
+b_moveGK3        NA        NA        NA
+b_moveGK4        NA        NA        NA
+b_moveGK6        NA        NA        NA
+ [ reached getOption("max.print") -- omitted 66 rows ]
+
+ 20 worst outliers in terms of lowest average per choice prediction:
+  ID Avg prob per choice
+ 104          0.02791367
+ 432          0.03430762
+  77          0.03482361
+ 226          0.03702158
+  57          0.04198346
+ 443          0.04384287
+ 163          0.04672626
+ 330          0.04694903
+ 210          0.04939213
+ 466          0.05061575
+ 478          0.05354235
+   2          0.05535142
+ 102          0.05647367
+  46          0.05652646
+ 290          0.05727549
+ 143          0.05989589
+ 284          0.06213695
+ 110          0.06255547
+ 265          0.06285618
+ 161          0.06703258
+
+Changes in parameter estimates from starting values:
+              Initial    Estimate  Difference
+asc_TL         0.0000    1.465094    1.465094
+asc_TC         0.0000    0.248071    0.248071
+asc_TR         0.0000    0.522162    0.522162
+asc_DL         0.0000   -0.408281   -0.408281
+asc_DC         0.0000    0.000000    0.000000
+asc_DR         0.0000    1.338064    1.338064
+b_foot1        0.0000    0.064778    0.064778
+b_foot2        0.0000    0.000000    0.000000
+b_foot3        0.0000   -0.622881   -0.622881
+b_moveGK1      0.0000    0.170582    0.170582
+b_moveGK2      0.0000   -0.045474   -0.045474
+b_moveGK3      0.0000    0.814053    0.814053
+b_moveGK4      0.0000    0.432088    0.432088
+b_moveGK5      0.0000    0.000000    0.000000
+b_moveGK6      0.0000   -0.426738   -0.426738
+b_GKS1         0.0000    0.097310    0.097310
+b_GKS2         0.0000    0.022584    0.022584
+b_GKS3         0.0000   -1.631950   -1.631950
+b_GKS4         0.0000   -0.132922   -0.132922
+b_GKS5         0.0000    0.000000    0.000000
+b_GKS6         0.0000    0.147491    0.147491
+b_IS1          0.0000    0.133961    0.133961
+b_IS2          0.0000   -0.068003   -0.068003
+b_IS3          0.0000    2.455203    2.455203
+b_IS4          0.0000    0.524706    0.524706
+b_IS5          0.0000    0.000000    0.000000
+b_IS6          0.0000   -0.081190   -0.081190
+b_comL1        0.0000   -0.294588   -0.294588
+b_comL2        0.0000   -0.119855   -0.119855
+b_comL3        0.0000    0.129888    0.129888
+b_comL4        0.0000    0.016605    0.016605
+b_comL5        0.0000    0.000000    0.000000
+b_comL6        0.0000    0.119445    0.119445
+b_HGK1         0.0000    0.022428    0.022428
+b_HGK2         0.0000    0.006680    0.006680
+b_HGK3         0.0000   -0.060104   -0.060104
+b_HGK4         0.0000   -0.017769   -0.017769
+b_HGK5         0.0000    0.000000    0.000000
+b_HGK6         0.0000    0.048616    0.048616
+b_dec1         0.0000    0.592177    0.592177
+b_dec2         0.0000   -0.265992   -0.265992
+b_dec3         0.0000    2.248485    2.248485
+b_dec4         0.0000    0.406383    0.406383
+b_dec5         0.0000    0.000000    0.000000
+b_dec6         0.0000   -0.078985   -0.078985
+b_lp1          0.0000    0.213908    0.213908
+b_lp2          0.0000   -0.143597   -0.143597
+b_lp3          0.0000   -0.854101   -0.854101
+b_lp4          0.0000    0.053374    0.053374
+b_lp5          0.0000    0.000000    0.000000
+b_lp6          0.0000    0.640805    0.640805
+b_latr1        0.0000    0.184122    0.184122
+b_latr2        0.0000    0.247603    0.247603
+b_latr3        0.0000    1.868416    1.868416
+b_latr4        0.0000    0.307298    0.307298
+b_latr5        0.0000    0.000000    0.000000
+b_latr6        0.0000   -0.149284   -0.149284
+b_ladr1        0.0000   -0.126072   -0.126072
+b_ladr2        0.0000   -0.003555   -0.003555
+b_ladr3        0.0000   -0.614612   -0.614612
+b_ladr4        0.0000    0.052410    0.052410
+b_ladr5        0.0000    0.000000    0.000000
+b_ladr6        0.0000   -0.188761   -0.188761
+b_sr1          0.0000  -37.913051  -37.913051
+b_sr3          0.0000 -236.269561 -236.269561
+b_perc         0.0000    0.317385    0.317385
+b_rnog1        0.0000   -0.166675   -0.166675
+b_rnog2        0.0000   -0.242838   -0.242838
+b_rnog3        0.0000    2.358544    2.358544
+b_rnog4        0.0000    0.015903    0.015903
+b_rnog5        0.0000    0.000000    0.000000
+b_rnog6        0.0000   -0.394084   -0.394084
+b_solsbg1      0.0000    0.107338    0.107338
+b_solsbg2      0.0000   -0.151860   -0.151860
+b_solsbg3      0.0000   -0.313984   -0.313984
+b_solsbg4      0.0000   -0.201632   -0.201632
+b_solsbg5      0.0000    0.000000    0.000000
+b_solsbg6      0.0000   -0.057784   -0.057784
+b_nmovGK1      0.0000    0.438477    0.438477
+b_nmovGK2      0.0000   -0.146947   -0.146947
+b_nmovGK3      0.0000    2.624079    2.624079
+b_nmovGK4      0.0000    0.781771    0.781771
+b_nmovGK5      0.0000    0.000000    0.000000
+b_nmovGK6      0.0000   -1.065023   -1.065023
+b_def1         0.0000   -0.023611   -0.023611
+b_def2         0.0000    0.264761    0.264761
+b_def3         0.0000    0.827570    0.827570
+b_def4         0.0000    0.111325    0.111325
+b_def5         0.0000    0.000000    0.000000
+b_def6         0.0000   -0.291644   -0.291644
+lambda_L       0.9500    0.565486   -0.384514
+lambda_C       0.9500    0.243076   -0.706924
+lambda_R       0.9500    4.586680    3.636680
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                            
+modelName              "Apollo_Nested_Model"            
+modelDescr             "Simple NL model on penalty data"
+indivID                "ID"                             
+debug                  "FALSE"                          
+nCores                 "1"                              
+workInLogs             "FALSE"                          
+seed                   "13"                             
+mixing                 "FALSE"                          
+HB                     "FALSE"                          
+noValidation           "FALSE"                          
+noDiagnostics          "FALSE"                          
+panelData              "TRUE"                           
+analyticGrad           "TRUE"                           
+analyticGrad_manualSet "FALSE"                          
+
+Hessian routines attempted
+--------------
+none
+
+
+apollo_probabilities
+--------------------
+function(apollo_beta, apollo_inputs, functionality="estimate"){
+  
+  ### Attach inputs and detach after function exit
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  
+  ### Create list of probabilities P
+  P = list()
+  
+  ### List of utilities: these must use the same names as in mnl_settings, order is irrelevant
+  V = list()
+  V[['TL']]  = asc_TL + b_foot1*foot + b_moveGK1*moveGK  + b_GKS1*GKS + b_IS1*IngSo + b_comL1*comLea + b_HGK1*HeiGK + b_dec1*Dec + b_lp1*lpbg  + b_latr1*la3 + b_ladr1*la6 + b_sr1*SRGK1  + b_perc*perc1   + b_rnog1*rnoGroup + b_solsbg1*Solsbg  + b_def1*def + b_nmovGK1*nmovGK
+  V[['TC']]  = asc_TC + b_foot2*foot + b_moveGK2*moveGK  + b_GKS2*GKS + b_IS2*IngSo + b_comL2*comLea + b_HGK2*HeiGK + b_dec2*Dec + b_lp2*lpbg  + b_latr2*la3 + b_ladr2*la6                + b_perc*perc2   + b_rnog2*rnoGroup + b_solsbg2*Solsbg  + b_def2*def + b_nmovGK2*nmovGK 
+  V[['TR']]  = asc_TR + b_foot3*foot + b_moveGK3*moveGK  + b_GKS3*GKS + b_IS3*IngSo + b_comL3*comLea + b_HGK3*HeiGK + b_dec3*Dec + b_lp3*lpbg  + b_latr3*la3 + b_ladr3*la6 + b_sr3*SRGK3  + b_perc*perc3   + b_rnog3*rnoGroup + b_solsbg3*Solsbg  + b_def3*def + b_nmovGK3*nmovGK 
+  V[['DL']]  = asc_DL + b_foot1*foot + b_moveGK4*moveGK  + b_GKS4*GKS + b_IS4*IngSo + b_comL4*comLea + b_HGK4*HeiGK + b_dec4*Dec + b_lp4*lpbg  + b_latr4*la3 + b_ladr4*la6                + b_perc*perc4   + b_rnog4*rnoGroup + b_solsbg4*Solsbg  + b_def4*def + b_nmovGK4*nmovGK 
+  V[['DC']]  = asc_DC + b_foot2*foot + b_moveGK5*moveGK  + b_GKS5*GKS + b_IS5*IngSo + b_comL5*comLea + b_HGK5*HeiGK + b_dec5*Dec + b_lp5*lpbg  + b_latr5*la3 + b_ladr5*la6                + b_perc*perc5   + b_rnog5*rnoGroup + b_solsbg5*Solsbg  + b_def5*def + b_nmovGK5*nmovGK 
+  V[['DR']]  = asc_DR + b_foot3*foot + b_moveGK6*moveGK  + b_GKS6*GKS + b_IS6*IngSo + b_comL6*comLea + b_HGK6*HeiGK + b_dec6*Dec + b_lp6*lpbg  + b_latr6*la3 + b_ladr6*la6                + b_perc*perc6   + b_rnog6*rnoGroup + b_solsbg6*Solsbg  + b_def6*def + b_nmovGK6*nmovGK
+  
+  ### Specify nests for NL model
+  nlNests  = list(root=1, L=lambda_L, C=lambda_C, R=lambda_R)
+  
+  ### Specify tree structure for NL model
+  nlStructure= list()
+  nlStructure[["root"]]   = c("L","C","R")
+  nlStructure[["L"]]      = c("TL","DL")
+  nlStructure[["C"]]      = c("TC","DC")
+  nlStructure[["R"]]      = c("TR","DR")
+  
+  ### Define settings for NL model component
+  nl_settings = list(
+    alternatives  = c(TL=1, TC=2, TR=3, DL=4, DC=5, DR=6), 
+    avail         = list(TL=av_1, TC=av_2, TR=av_3, DL=av_4, DC=av_5, DR=av_6), 
+    choiceVar     = Choice,
+    V             = V,
+    nlNests      = nlNests,
+    nlStructure  = nlStructure
+  )
+  
+  ### Compute probabilities using MNL model
+  P[['model']] = apollo_nl(nl_settings, functionality)
+  
+  ### Take product across observation for same individual
+  P = apollo_panelProd(P, apollo_inputs, functionality)
+  
+  ### Prepare and return outputs of function
+  P = apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
