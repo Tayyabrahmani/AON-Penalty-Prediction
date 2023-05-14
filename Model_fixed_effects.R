@@ -7,9 +7,16 @@ library(dplyr)
 library(apollo)							# run apollo package
 apollo_initialise()
 
+substrRight <- function(x, n){
+  substr(x, nchar(x)-n+1, nchar(x))
+}
+
 database <- read_excel("SixAlt.xlsx")
 database <- as.data.frame(database)
-database = rename(database, "player_position" = "player position")
+database = rename(database, "player_position" = "player position", "gk_stand" = "GK Stand", "sort_of_movement" = "Sort of Movement",
+"competition_grouped" = "competition grouped", "Importantness_Game" = "Importantness Game", "lead_deficit" = "Lead-Deficit", "minute_pars" = "Minute Pars",
+"location" = "Location (H-A-N)", "Penalty_type" = "Ingame-Shootout?", "decider" = "Decider?", "shot_hard" = "Schuss hart ja nein",
+"greak_gk" = "Great GK?")
 
 # Add the num of penalties and cumsum to the database
 Num_penalties = database %>% 
@@ -22,8 +29,25 @@ Num_penalties = database %>%
 
 database <- merge(database, Num_penalties[c('Player', 'consider_fe')], by.x="Player", by.y="Player")
 
-cols_to_select = c("player_position", "foot", "consider_fe")
-cols_to_remove = c("player_position_GK", "foot_L", "consider_nan")
+cols_to_select = c("consider_fe", "location", "lead_deficit", "minute_pars", "competition_grouped",
+                   "Importantness_Game", "gk_stand", "sort_of_movement", "Penalty_type", "decider", "shot_hard", "greak_gk")
+cols_to_remove = c("consider_nan", "location_N", "lead_deficit_0",
+                   "minute_pars_-", "competition_grouped_Friendly", "Importantness_Game_1",
+                   "gk_stand_central", "sort_of_movement_-", "sort_of_movement_still", "Penalty_type_Shootout", "decider_no", "shot_hard_no", "greak_gk_no")
+
+# cols_to_select = c("location", "lead_deficit", "minute_pars", "competition_grouped", 
+#                    "Importantness_Game", "gk_stand", "sort_of_movement", "Penalty_type", "decider", "shot_hard", "greak_gk")
+# cols_to_remove = c("location_N", "lead_deficit_0",
+#                    "minute_pars_-", "competition_grouped_Friendly", "Importantness_Game_1",
+#                    "gk_stand_central", "sort_of_movement_-", "sort_of_movement_still", "Penalty_type_Shootout", "decider_no", "shot_hard_no", "greak_gk_no"
+#                    )
+cols_with_same_beta = c("lead_deficit", "minute_pars", "competition_grouped", "Importantness_Game")
+
+# calculate the mode of the "shot_hard" column
+mode_val <- names(which.max(table(database$shot_hard)))
+
+# replace the missing values with the mode
+database <- database %>% mutate(shot_hard = ifelse(is.na(shot_hard), mode_val, shot_hard))
 
 # apply string replacement to selected columns
 database <- database %>%
@@ -50,13 +74,18 @@ choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
 
 #Define name and starting values for the coefficients to be estimated
 K <- grep(paste(cols_to_select, collapse = "|"), names(database), value=TRUE)
+n <- 6
+cols_with_same_beta <- grep(paste(cols_with_same_beta, collapse = "|"), names(database), value=TRUE)
+K <- setdiff(K, cols_with_same_beta)
+K <- paste0(rep(K, each = n-1), rep(2:n, times = length(K)))
+K = c(K, cols_with_same_beta)
 apollo_beta_constants = paste0("asc_", choice_map[sort(unique(database$Choice))[-1]])
-apollo_beta_constants <- c(K, apollo_beta_constants)
+var_choice <- c(paste0("perc", seq(from = 2, to = 6)))
+apollo_beta_constants <- c(K, apollo_beta_constants, var_choice)
 apollo_beta = setNames(rep(0,length(apollo_beta_constants)),paste0("b_", apollo_beta_constants))
 
 #all coefficients may be altered, none is fixed
 apollo_fixed=c()
-
 
 #check if you have defined everything necessary 
 apollo_inputs = apollo_validateInputs()
@@ -74,9 +103,15 @@ apollo_probabilities=function(apollo_beta, apollo_inputs, functionality="estimat
     if (j==1){
       V[[paste0("alt_", choice_map[j])]] = 0
     } else {
-      V[[paste0("alt_", choice_map[j])]] = get(paste0("b_asc_", choice_map[j]))
-        for(k in 1:length(K)) {V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
-          get(paste0("b_", K[k]))*get(paste0(K[k]))}
+      V[[paste0("alt_", choice_map[j])]] = get(paste0("b_asc_", choice_map[j])) + get(paste0("b_", var_choice[j-1]))*get(paste0(var_choice[j-1]))
+        for(k in 1:length(K)) {
+            if (K[k] %in% cols_with_same_beta) {
+            V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+          get(paste0("b_", K[k]))*get(K[k])}
+            else if (substrRight(K[k], 1) == j){
+            V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+          get(paste0("b_", K[k]))*get(sub(j, "", K[k]))} 
+            }
       }
   }
   
@@ -103,6 +138,7 @@ BaseSpec = apollo_estimate(apollo_beta,
                            apollo_inputs)
 
 apollo_modelOutput(BaseSpec)
+apollo_saveOutput(BaseSpec)
 
 L<-NULL
 L[[1]]<-BaseSpec
