@@ -8,7 +8,7 @@ install.packages("tidyverse")
 library(tidyverse)	
 
 library(readxl)
-database <- read_excel("SixAlt.xlsx")
+database <- read_excel("AON/SixAlt.xlsx")
 View(database)
 database <- as.data.frame(database)
 
@@ -48,12 +48,12 @@ apollo_probabilities=function(apollo_beta, apollo_inputs, functionality="estimat
   P = list()								 ### Create list of probabilities P
   
   V = list()								 ### List of utilities
-  V[['TL']]  = 	0	      
-  V[['TC']]  =  asc_TC 
-  V[['TR']]  = 	asc_TR 
-  V[['BL']]  = 	asc_BL  
-  V[['BC']]  =  asc_BC 
-  V[['BR']]  =  asc_BR 
+  V[['TL']]  = 	0
+  V[['TC']]  =  asc_TC
+  V[['TR']]  = 	asc_TR
+  V[['BL']]  = 	asc_BL
+  V[['BC']]  =  asc_BC
+  V[['BR']]  =  asc_BR
  
   
   mnl_settings = list(						       ### Define settings for model 
