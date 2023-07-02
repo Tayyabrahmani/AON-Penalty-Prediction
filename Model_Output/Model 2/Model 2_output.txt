@@ -1,0 +1,1087 @@
+Model run by Tayyab using Apollo 0.2.9 on R 4.3.0 for Windows.
+www.ApolloChoiceModelling.com
+
+Model name                                  : Model 2
+Model description                           : Player position and foot model
+Model run at                                : 2023-06-30 14:03:12.981622
+Estimation method                           : bfgs
+Model diagnosis                             : successful convergence
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definitive
+     maximum eigenvalue                     : -3.417635
+Number of individuals                       : 485
+Number of rows in database                  : 2358
+Number of modelled outcomes                 : 2358
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -4224.97
+LL at equal shares, LL(0)                   : -4224.97
+LL at observed shares, LL(C)                : -3586.82
+LL(final)                                   : -3548.05
+Rho-squared vs equal shares                  :  0.1602 
+Adj.Rho-squared vs equal shares              :  0.1555 
+Rho-squared vs observed shares               :  0.0108 
+Adj.Rho-squared vs observed shares           :  0.0066 
+AIC                                         :  7136.1 
+BIC                                         :  7251.41 
+
+Estimated parameters                        : 20
+Time taken (hh:mm:ss)                       :  00:00:27.55 
+     pre-estimation                         :  00:00:10.53 
+     estimation                             :  00:00:11.69 
+     post-estimation                        :  00:00:5.33 
+Iterations                                  :  28  
+
+Unconstrained optimisation.
+
+Estimates:
+                         Estimate        s.e.   t.rat.(0)    Rob.s.e.
+b_player_position_MF2    -0.68576    0.207228      -3.309     0.56552
+b_player_position_MF3    -0.34492    0.095125      -3.626     0.27884
+b_player_position_MF4    -0.14907    0.040869      -3.648     0.16190
+b_player_position_MF5     0.48368    0.214286       2.257     0.42601
+b_player_position_MF6     0.07892    0.019069       4.139     0.10252
+b_player_position_ST2    -0.28007    0.080973      -3.459     0.22074
+b_player_position_ST3    -0.02301    0.005964      -3.858     0.01804
+b_player_position_ST4     0.32257    0.075683       4.262     0.35520
+b_player_position_ST5     0.60712    0.262296       2.315     0.54785
+b_player_position_ST6     0.35445    0.083087       4.266     0.45667
+b_foot_R2                 0.29608    0.122936       2.408     0.21132
+b_foot_R3                -1.02284    0.244829      -4.178     0.85099
+b_foot_R4                -0.06980    0.013589      -5.136     0.06087
+b_foot_R5                -0.39602    0.104770      -3.780     0.28521
+b_foot_R6                -0.64761    0.121166      -5.345     0.47392
+b_asc_TC                 -0.43777    0.189652      -2.308     0.54697
+b_asc_TR                  0.77054    0.205242       3.754     1.02970
+b_asc_BL                  1.24804    0.316546       3.943     2.26136
+b_asc_BC                 -0.56286    0.246442      -2.284     0.75458
+b_asc_BR                  1.43173    0.360287       3.974     2.47627
+                      Rob.t.rat.(0)
+b_player_position_MF2       -1.2126
+b_player_position_MF3       -1.2370
+b_player_position_MF4       -0.9207
+b_player_position_MF5        1.1354
+b_player_position_MF6        0.7698
+b_player_position_ST2       -1.2688
+b_player_position_ST3       -1.2756
+b_player_position_ST4        0.9081
+b_player_position_ST5        1.1082
+b_player_position_ST6        0.7762
+b_foot_R2                    1.4011
+b_foot_R3                   -1.2019
+b_foot_R4                   -1.1465
+b_foot_R5                   -1.3885
+b_foot_R6                   -1.3665
+b_asc_TC                    -0.8004
+b_asc_TR                     0.7483
+b_asc_BL                     0.5519
+b_asc_BC                    -0.7459
+b_asc_BR                     0.5782
+
+
+Overview of choices for MNL model component :
+                                  alt_TL alt_TC  alt_TR  alt_BL  alt_BC
+Times available                  2358.00 2358.0 2358.00 2358.00 2358.00
+Times chosen                      232.00  132.0  212.00  878.00  161.00
+Percentage chosen overall           9.84    5.6    8.99   37.23    6.83
+Percentage chosen when available    9.84    5.6    8.99   37.23    6.83
+                                  alt_BR
+Times available                  2358.00
+Times chosen                      743.00
+Percentage chosen overall          31.51
+Percentage chosen when available   31.51
+
+
+
+Classical covariance matrix:
+                      b_player_position_MF2 b_player_position_MF3
+b_player_position_MF2              0.042943              0.008218
+b_player_position_MF3              0.008218              0.009049
+b_player_position_MF4              0.003532              0.001862
+b_player_position_MF5              0.011436              0.006063
+b_player_position_MF6              0.001866            9.8926e-04
+b_player_position_ST2              0.011359              0.002552
+b_player_position_ST3            4.1576e-04            3.7649e-04
+b_player_position_ST4              0.005800              0.003077
+b_player_position_ST5              0.010895              0.005810
+b_player_position_ST6              0.006361              0.003392
+b_foot_R2                         -0.003248           -3.8896e-04
+b_foot_R3                         -0.003676             -0.004056
+b_foot_R4                       -2.1656e-04           -1.1430e-04
+b_foot_R5                         -0.001155           -7.1281e-04
+b_foot_R6                         -0.001888             -0.001166
+b_asc_TC                          -0.013298             -0.003502
+b_asc_TR                          -0.011593             -0.010218
+b_asc_BL                          -0.019103             -0.010107
+b_asc_BC                          -0.008671             -0.004510
+b_asc_BR                          -0.022057             -0.011471
+                      b_player_position_MF4 b_player_position_MF5
+b_player_position_MF2              0.003532              0.011436
+b_player_position_MF3              0.001862              0.006063
+b_player_position_MF4              0.001670              0.002643
+b_player_position_MF5              0.002643              0.045919
+b_player_position_MF6            4.3121e-04              0.001405
+b_player_position_ST2              0.001092              0.003543
+b_player_position_ST3             9.563e-05            3.1019e-04
+b_player_position_ST4              0.002263              0.004382
+b_player_position_ST5              0.002550              0.049110
+b_player_position_ST6              0.001489              0.004832
+b_foot_R2                       -1.5160e-04           -4.8250e-04
+b_foot_R3                       -5.7844e-04             -0.001860
+b_foot_R4                        -7.517e-05           -1.6594e-04
+b_foot_R5                       -3.1997e-04             -0.003137
+b_foot_R6                       -5.2326e-04             -0.001713
+b_asc_TC                          -0.001523             -0.004949
+b_asc_TR                          -0.002789             -0.009073
+b_asc_BL                          -0.007629             -0.014325
+b_asc_BC                          -0.001965             -0.042118
+b_asc_BR                          -0.004997             -0.016229
+                      b_player_position_MF6 b_player_position_ST2
+b_player_position_MF2              0.001866              0.011359
+b_player_position_MF3            9.8926e-04              0.002552
+b_player_position_MF4            4.3121e-04              0.001092
+b_player_position_MF5              0.001405              0.003543
+b_player_position_MF6            3.6365e-04            5.7813e-04
+b_player_position_ST2            5.7813e-04              0.006557
+b_player_position_ST3             5.061e-05            2.0881e-04
+b_player_position_ST4            7.1493e-04              0.002912
+b_player_position_ST5              0.001350              0.005479
+b_player_position_ST6              0.001315              0.003199
+b_foot_R2                        -7.873e-05           -9.9485e-04
+b_foot_R3                       -3.0350e-04             -0.001129
+b_foot_R4                        -2.708e-05            -5.863e-05
+b_foot_R5                       -1.7096e-04           -3.2919e-04
+b_foot_R6                       -3.5503e-04           -5.3833e-04
+b_asc_TC                        -8.0753e-04             -0.005847
+b_asc_TR                          -0.001480             -0.004948
+b_asc_BL                          -0.002337             -0.008189
+b_asc_BC                          -0.001041             -0.003696
+b_asc_BR                          -0.004655             -0.009402
+                      b_player_position_ST3 b_player_position_ST4
+b_player_position_MF2            4.1576e-04              0.005800
+b_player_position_MF3            3.7649e-04              0.003077
+b_player_position_MF4             9.563e-05              0.002263
+b_player_position_MF5            3.1019e-04              0.004382
+b_player_position_MF6             5.061e-05            7.1493e-04
+b_player_position_ST2            2.0881e-04              0.002912
+b_player_position_ST3             3.556e-05            2.5265e-04
+b_player_position_ST4            2.5265e-04              0.005728
+b_player_position_ST5            4.7544e-04              0.006723
+b_player_position_ST6            2.7757e-04              0.003925
+b_foot_R2                        -1.649e-05           -2.0701e-04
+b_foot_R3                       -1.8155e-04           -8.2367e-04
+b_foot_R4                        -6.384e-06           -1.2727e-04
+b_foot_R5                        -3.592e-05           -5.2109e-04
+b_foot_R6                        -5.875e-05           -8.5215e-04
+b_asc_TC                        -2.4382e-04             -0.003433
+b_asc_TR                        -7.2365e-04             -0.006273
+b_asc_BL                        -6.9644e-04             -0.016953
+b_asc_BC                        -3.1432e-04             -0.004429
+b_asc_BR                        -7.9952e-04             -0.011267
+                      b_player_position_ST5 b_player_position_ST6
+b_player_position_MF2              0.010895              0.006361
+b_player_position_MF3              0.005810              0.003392
+b_player_position_MF4              0.002550              0.001489
+b_player_position_MF5              0.049110              0.004832
+b_player_position_MF6              0.001350              0.001315
+b_player_position_ST2              0.005479              0.003199
+b_player_position_ST3            4.7544e-04            2.7757e-04
+b_player_position_ST4              0.006723              0.003925
+b_player_position_ST5              0.068799              0.007389
+b_player_position_ST6              0.007389              0.006903
+b_foot_R2                       -3.8165e-04           -2.2281e-04
+b_foot_R3                         -0.001536           -8.9673e-04
+b_foot_R4                       -1.7327e-04           -1.0116e-04
+b_foot_R5                         -0.002766           -5.7732e-04
+b_foot_R6                         -0.001617             -0.001174
+b_asc_TC                          -0.006466             -0.003775
+b_asc_TR                          -0.011827             -0.006905
+b_asc_BL                          -0.018506             -0.010804
+b_asc_BC                          -0.053839             -0.004870
+b_asc_BR                          -0.021218             -0.021532
+                                  b_foot_R2             b_foot_R3
+b_player_position_MF2             -0.003248             -0.003676
+b_player_position_MF3           -3.8896e-04             -0.004056
+b_player_position_MF4           -1.5160e-04           -5.7844e-04
+b_player_position_MF5           -4.8250e-04             -0.001860
+b_player_position_MF6            -7.873e-05           -3.0350e-04
+b_player_position_ST2           -9.9485e-04             -0.001129
+b_player_position_ST3            -1.649e-05           -1.8155e-04
+b_player_position_ST4           -2.0701e-04           -8.2367e-04
+b_player_position_ST5           -3.8165e-04             -0.001536
+b_player_position_ST6           -2.2281e-04           -8.9673e-04
+b_foot_R2                          0.015113              0.009091
+b_foot_R3                          0.009091              0.059941
+b_foot_R4                        5.9168e-04              0.002050
+b_foot_R5                          0.003329              0.011583
+b_foot_R6                          0.005443              0.018942
+b_asc_TC                          -0.019358             -0.010006
+b_asc_TR                          -0.005346             -0.029664
+b_asc_BL                          -0.008387             -0.028680
+b_asc_BC                          -0.003761             -0.012896
+b_asc_BR                          -0.009567             -0.032804
+                                  b_foot_R4             b_foot_R5
+b_player_position_MF2           -2.1656e-04             -0.001155
+b_player_position_MF3           -1.1430e-04           -7.1281e-04
+b_player_position_MF4            -7.517e-05           -3.1997e-04
+b_player_position_MF5           -1.6594e-04             -0.003137
+b_player_position_MF6            -2.708e-05           -1.7096e-04
+b_player_position_ST2            -5.863e-05           -3.2919e-04
+b_player_position_ST3            -6.384e-06            -3.592e-05
+b_player_position_ST4           -1.2727e-04           -5.2109e-04
+b_player_position_ST5           -1.7327e-04             -0.002766
+b_player_position_ST6           -1.0116e-04           -5.7732e-04
+b_foot_R2                        5.9168e-04              0.003329
+b_foot_R3                          0.002050              0.011583
+b_foot_R4                        1.8467e-04            8.1109e-04
+b_foot_R5                        8.1109e-04              0.010977
+b_foot_R6                          0.001326              0.007573
+b_asc_TC                        -6.6550e-04             -0.003757
+b_asc_TR                          -0.001150             -0.006450
+b_asc_BL                          -0.002287             -0.010644
+b_asc_BC                        -8.5297e-04             -0.009611
+b_asc_BR                          -0.002170             -0.012266
+                                  b_foot_R6              b_asc_TC
+b_player_position_MF2             -0.001888             -0.013298
+b_player_position_MF3             -0.001166             -0.003502
+b_player_position_MF4           -5.2326e-04             -0.001523
+b_player_position_MF5             -0.001713             -0.004949
+b_player_position_MF6           -3.5503e-04           -8.0753e-04
+b_player_position_ST2           -5.3833e-04             -0.005847
+b_player_position_ST3            -5.875e-05           -2.4382e-04
+b_player_position_ST4           -8.5215e-04             -0.003433
+b_player_position_ST5             -0.001617             -0.006466
+b_player_position_ST6             -0.001174             -0.003775
+b_foot_R2                          0.005443             -0.019358
+b_foot_R3                          0.018942             -0.010006
+b_foot_R4                          0.001326           -6.6550e-04
+b_foot_R5                          0.007573             -0.003757
+b_foot_R6                          0.014681             -0.006144
+b_asc_TC                          -0.006144              0.035968
+b_asc_TR                          -0.010548              0.014692
+b_asc_BL                          -0.017406              0.023632
+b_asc_BC                          -0.007886              0.010644
+b_asc_BR                          -0.022755              0.027074
+                                   b_asc_TR              b_asc_BL
+b_player_position_MF2             -0.011593             -0.019103
+b_player_position_MF3             -0.010218             -0.010107
+b_player_position_MF4             -0.002789             -0.007629
+b_player_position_MF5             -0.009073             -0.014325
+b_player_position_MF6             -0.001480             -0.002337
+b_player_position_ST2             -0.004948             -0.008189
+b_player_position_ST3           -7.2365e-04           -6.9644e-04
+b_player_position_ST4             -0.006273             -0.016953
+b_player_position_ST5             -0.011827             -0.018506
+b_player_position_ST6             -0.006905             -0.010804
+b_foot_R2                         -0.005346             -0.008387
+b_foot_R3                         -0.029664             -0.028680
+b_foot_R4                         -0.001150             -0.002287
+b_foot_R5                         -0.006450             -0.010644
+b_foot_R6                         -0.010548             -0.017406
+b_asc_TC                           0.014692              0.023632
+b_asc_TR                           0.042124              0.042089
+b_asc_BL                           0.042089              0.100201
+b_asc_BC                           0.018926              0.030398
+b_asc_BR                           0.048142              0.077322
+                                   b_asc_BC              b_asc_BR
+b_player_position_MF2             -0.008671             -0.022057
+b_player_position_MF3             -0.004510             -0.011471
+b_player_position_MF4             -0.001965             -0.004997
+b_player_position_MF5             -0.042118             -0.016229
+b_player_position_MF6             -0.001041             -0.004655
+b_player_position_ST2             -0.003696             -0.009402
+b_player_position_ST3           -3.1432e-04           -7.9952e-04
+b_player_position_ST4             -0.004429             -0.011267
+b_player_position_ST5             -0.053839             -0.021218
+b_player_position_ST6             -0.004870             -0.021532
+b_foot_R2                         -0.003761             -0.009567
+b_foot_R3                         -0.012896             -0.032804
+b_foot_R4                       -8.5297e-04             -0.002170
+b_foot_R5                         -0.009611             -0.012266
+b_foot_R6                         -0.007886             -0.022755
+b_asc_TC                           0.010644              0.027074
+b_asc_TR                           0.018926              0.048142
+b_asc_BL                           0.030398              0.077322
+b_asc_BC                           0.060734              0.034839
+b_asc_BR                           0.034839              0.129807
+
+Robust covariance matrix:
+                      b_player_position_MF2 b_player_position_MF3
+b_player_position_MF2              0.319810              0.146892
+b_player_position_MF3              0.146892              0.077754
+b_player_position_MF4              0.080964              0.039110
+b_player_position_MF5              0.213015              0.110837
+b_player_position_MF6              0.050891              0.025207
+b_player_position_ST2              0.122348              0.058188
+b_player_position_ST3              0.009360              0.005001
+b_player_position_ST4              0.175394              0.085170
+b_player_position_ST5              0.260983              0.138552
+b_player_position_ST6              0.225607              0.112489
+b_foot_R2                          0.064802              0.028248
+b_foot_R3                          0.326479              0.140787
+b_foot_R4                          0.022317              0.009913
+b_foot_R5                          0.105815              0.046020
+b_foot_R6                          0.188776              0.083755
+b_asc_TC                          -0.268479             -0.123809
+b_asc_TR                          -0.524151             -0.258286
+b_asc_BL                          -1.022897             -0.481588
+b_asc_BC                          -0.364269             -0.179743
+b_asc_BR                          -1.276904             -0.615491
+                      b_player_position_MF4 b_player_position_MF5
+b_player_position_MF2              0.080964              0.213015
+b_player_position_MF3              0.039110              0.110837
+b_player_position_MF4              0.026213              0.058183
+b_player_position_MF5              0.058183              0.181486
+b_player_position_MF6              0.011651              0.037802
+b_player_position_ST2              0.032705              0.085088
+b_player_position_ST3              0.002520              0.007142
+b_player_position_ST4              0.057412              0.126823
+b_player_position_ST5              0.073602              0.228944
+b_player_position_ST6              0.052211              0.168837
+b_foot_R2                          0.026047              0.042682
+b_foot_R3                          0.116744              0.228927
+b_foot_R4                          0.008841              0.015739
+b_foot_R5                          0.040548              0.074290
+b_foot_R6                          0.069369              0.132960
+b_asc_TC                          -0.082600             -0.181778
+b_asc_TR                          -0.160659             -0.386293
+b_asc_BL                          -0.358759             -0.732646
+b_asc_BC                          -0.115311             -0.294730
+b_asc_BR                          -0.345372             -0.938433
+                      b_player_position_MF6 b_player_position_ST2
+b_player_position_MF2              0.050891              0.122348
+b_player_position_MF3              0.025207              0.058188
+b_player_position_MF4              0.011651              0.032705
+b_player_position_MF5              0.037802              0.085088
+b_player_position_MF6              0.010511              0.020282
+b_player_position_ST2              0.020282              0.048726
+b_player_position_ST3              0.001607              0.003750
+b_player_position_ST4              0.025174              0.071360
+b_player_position_ST5              0.046615              0.106986
+b_player_position_ST6              0.046771              0.090585
+b_foot_R2                          0.007930              0.028227
+b_foot_R3                          0.046528              0.138496
+b_foot_R4                          0.002726              0.009469
+b_foot_R5                          0.014054              0.044906
+b_foot_R6                          0.026413              0.079840
+b_asc_TC                          -0.040593             -0.109343
+b_asc_TR                          -0.083496             -0.214722
+b_asc_BL                          -0.139732             -0.421924
+b_asc_BC                          -0.059332             -0.150318
+b_asc_BR                          -0.240342             -0.520213
+                      b_player_position_ST3 b_player_position_ST4
+b_player_position_MF2              0.009360              0.175394
+b_player_position_MF3              0.005001              0.085170
+b_player_position_MF4              0.002520              0.057412
+b_player_position_MF5              0.007142              0.126823
+b_player_position_MF6              0.001607              0.025174
+b_player_position_ST2              0.003750              0.071360
+b_player_position_ST3            3.2537e-04              0.005508
+b_player_position_ST4              0.005508              0.126166
+b_player_position_ST5              0.009052              0.161741
+b_player_position_ST6              0.007197              0.113135
+b_foot_R2                          0.001827              0.058020
+b_foot_R3                          0.009228              0.258659
+b_foot_R4                        6.4371e-04              0.019520
+b_foot_R5                          0.002966              0.089391
+b_foot_R6                          0.005428              0.152991
+b_asc_TC                          -0.007959             -0.181582
+b_asc_TR                          -0.016814             -0.353015
+b_asc_BL                          -0.031148             -0.789228
+b_asc_BC                          -0.011630             -0.253205
+b_asc_BR                          -0.039469             -0.753028
+                      b_player_position_ST5 b_player_position_ST6
+b_player_position_MF2              0.260983              0.225607
+b_player_position_MF3              0.138552              0.112489
+b_player_position_MF4              0.073602              0.052211
+b_player_position_MF5              0.228944              0.168837
+b_player_position_MF6              0.046615              0.046771
+b_player_position_ST2              0.106986              0.090585
+b_player_position_ST3              0.009052              0.007197
+b_player_position_ST4              0.161741              0.113135
+b_player_position_ST5              0.300135              0.210001
+b_player_position_ST6              0.210001              0.208545
+b_foot_R2                          0.056980              0.036676
+b_foot_R3                          0.299347              0.211796
+b_foot_R4                          0.020571              0.012403
+b_foot_R5                          0.096985              0.063709
+b_foot_R6                          0.172675              0.119664
+b_asc_TC                          -0.231533             -0.182718
+b_asc_TR                          -0.494053             -0.375771
+b_asc_BL                          -0.940119             -0.629810
+b_asc_BC                          -0.381597             -0.267056
+b_asc_BR                          -1.178949             -1.074625
+                                  b_foot_R2             b_foot_R3
+b_player_position_MF2              0.064802              0.326479
+b_player_position_MF3              0.028248              0.140787
+b_player_position_MF4              0.026047              0.116744
+b_player_position_MF5              0.042682              0.228927
+b_player_position_MF6              0.007930              0.046528
+b_player_position_ST2              0.028227              0.138496
+b_player_position_ST3              0.001827              0.009228
+b_player_position_ST4              0.058020              0.258659
+b_player_position_ST5              0.056980              0.299347
+b_player_position_ST6              0.036676              0.211796
+b_foot_R2                          0.044655              0.155250
+b_foot_R3                          0.155250              0.724183
+b_foot_R4                          0.011255              0.048703
+b_foot_R5                          0.051888              0.228970
+b_foot_R6                          0.086907              0.386640
+b_asc_TC                          -0.101952             -0.405656
+b_asc_TR                          -0.161801             -0.772872
+b_asc_BL                          -0.398561             -1.753329
+b_asc_BC                          -0.113888             -0.547010
+b_asc_BR                          -0.316125             -1.603289
+                                  b_foot_R4             b_foot_R5
+b_player_position_MF2              0.022317              0.105815
+b_player_position_MF3              0.009913              0.046020
+b_player_position_MF4              0.008841              0.040548
+b_player_position_MF5              0.015739              0.074290
+b_player_position_MF6              0.002726              0.014054
+b_player_position_ST2              0.009469              0.044906
+b_player_position_ST3            6.4371e-04              0.002966
+b_player_position_ST4              0.019520              0.089391
+b_player_position_ST5              0.020571              0.096985
+b_player_position_ST6              0.012403              0.063709
+b_foot_R2                          0.011255              0.051888
+b_foot_R3                          0.048703              0.228970
+b_foot_R4                          0.003706              0.017093
+b_foot_R5                          0.017093              0.081347
+b_foot_R6                          0.028468              0.133158
+b_asc_TC                          -0.028605             -0.133768
+b_asc_TR                          -0.053458             -0.249409
+b_asc_BL                          -0.133054             -0.612054
+b_asc_BC                          -0.039325             -0.187068
+b_asc_BR                          -0.105459             -0.517245
+                                  b_foot_R6              b_asc_TC
+b_player_position_MF2              0.188776             -0.268479
+b_player_position_MF3              0.083755             -0.123809
+b_player_position_MF4              0.069369             -0.082600
+b_player_position_MF5              0.132960             -0.181778
+b_player_position_MF6              0.026413             -0.040593
+b_player_position_ST2              0.079840             -0.109343
+b_player_position_ST3              0.005428             -0.007959
+b_player_position_ST4              0.152991             -0.181582
+b_player_position_ST5              0.172675             -0.231533
+b_player_position_ST6              0.119664             -0.182718
+b_foot_R2                          0.086907             -0.101952
+b_foot_R3                          0.386640             -0.405656
+b_foot_R4                          0.028468             -0.028605
+b_foot_R5                          0.133158             -0.133768
+b_foot_R6                          0.224598             -0.230858
+b_asc_TC                          -0.230858              0.299177
+b_asc_TR                          -0.434206              0.528947
+b_asc_BL                          -1.034281              1.144576
+b_asc_BC                          -0.318031              0.370316
+b_asc_BR                          -0.920298              1.184748
+                                   b_asc_TR              b_asc_BL
+b_player_position_MF2              -0.52415              -1.02290
+b_player_position_MF3              -0.25829              -0.48159
+b_player_position_MF4              -0.16066              -0.35876
+b_player_position_MF5              -0.38629              -0.73265
+b_player_position_MF6              -0.08350              -0.13973
+b_player_position_ST2              -0.21472              -0.42192
+b_player_position_ST3              -0.01681              -0.03115
+b_player_position_ST4              -0.35302              -0.78923
+b_player_position_ST5              -0.49405              -0.94012
+b_player_position_ST6              -0.37577              -0.62981
+b_foot_R2                          -0.16180              -0.39856
+b_foot_R3                          -0.77287              -1.75333
+b_foot_R4                          -0.05346              -0.13305
+b_foot_R5                          -0.24941              -0.61205
+b_foot_R6                          -0.43421              -1.03428
+b_asc_TC                            0.52895               1.14458
+b_asc_TR                            1.06027               2.18988
+b_asc_BL                            2.18988               5.11375
+b_asc_BC                            0.74474               1.58870
+b_asc_BR                            2.35623               4.55193
+                                   b_asc_BC              b_asc_BR
+b_player_position_MF2              -0.36427              -1.27690
+b_player_position_MF3              -0.17974              -0.61549
+b_player_position_MF4              -0.11531              -0.34537
+b_player_position_MF5              -0.29473              -0.93843
+b_player_position_MF6              -0.05933              -0.24034
+b_player_position_ST2              -0.15032              -0.52021
+b_player_position_ST3              -0.01163              -0.03947
+b_player_position_ST4              -0.25321              -0.75303
+b_player_position_ST5              -0.38160              -1.17895
+b_player_position_ST6              -0.26706              -1.07463
+b_foot_R2                          -0.11389              -0.31612
+b_foot_R3                          -0.54701              -1.60329
+b_foot_R4                          -0.03933              -0.10546
+b_foot_R5                          -0.18707              -0.51724
+b_foot_R6                          -0.31803              -0.92030
+b_asc_TC                            0.37032               1.18475
+b_asc_TR                            0.74474               2.35623
+b_asc_BL                            1.58870               4.55193
+b_asc_BC                            0.56939               1.69605
+b_asc_BR                            1.69605               6.13192
+
+Classical correlation matrix:
+                      b_player_position_MF2 b_player_position_MF3
+b_player_position_MF2               1.00000               0.41691
+b_player_position_MF3               0.41691               1.00000
+b_player_position_MF4               0.41706               0.47897
+b_player_position_MF5               0.25753               0.29744
+b_player_position_MF6               0.47219               0.54535
+b_player_position_ST2               0.67696               0.33133
+b_player_position_ST3               0.33643               0.66368
+b_player_position_ST4               0.36980               0.42742
+b_player_position_ST5               0.20044               0.23284
+b_player_position_ST6               0.36943               0.42914
+b_foot_R2                          -0.12751              -0.03326
+b_foot_R3                          -0.07245              -0.17417
+b_foot_R4                          -0.07690              -0.08842
+b_foot_R5                          -0.05318              -0.07152
+b_foot_R6                          -0.07520              -0.10114
+b_asc_TC                           -0.33837              -0.19411
+b_asc_TR                           -0.27257              -0.52334
+b_asc_BL                           -0.29121              -0.33566
+b_asc_BC                           -0.16979              -0.19237
+b_asc_BR                           -0.29542              -0.33471
+                      b_player_position_MF4 b_player_position_MF5
+b_player_position_MF2               0.41706               0.25753
+b_player_position_MF3               0.47897               0.29744
+b_player_position_MF4               1.00000               0.30177
+b_player_position_MF5               0.30177               1.00000
+b_player_position_MF6               0.55330               0.34378
+b_player_position_ST2               0.33009               0.20420
+b_player_position_ST3               0.39238               0.24273
+b_player_position_ST4               0.73157               0.27017
+b_player_position_ST5               0.23790               0.87375
+b_player_position_ST6               0.43847               0.27139
+b_foot_R2                          -0.03017              -0.01832
+b_foot_R3                          -0.05781              -0.03545
+b_foot_R4                          -0.13534              -0.05698
+b_foot_R5                          -0.07473              -0.13975
+b_foot_R6                          -0.10567              -0.06599
+b_asc_TC                           -0.19655              -0.12178
+b_asc_TR                           -0.33246              -0.20629
+b_asc_BL                           -0.58971              -0.21118
+b_asc_BC                           -0.19506              -0.79754
+b_asc_BR                           -0.33939              -0.21021
+                      b_player_position_MF6 b_player_position_ST2
+b_player_position_MF2               0.47219               0.67696
+b_player_position_MF3               0.54535               0.33133
+b_player_position_MF4               0.55330               0.33009
+b_player_position_MF5               0.34378               0.20420
+b_player_position_MF6               1.00000               0.37440
+b_player_position_ST2               0.37440               1.00000
+b_player_position_ST3               0.44506               0.43241
+b_player_position_ST4               0.49537               0.47514
+b_player_position_ST5               0.26999               0.25799
+b_player_position_ST6               0.82986               0.47549
+b_foot_R2                          -0.03358              -0.09994
+b_foot_R3                          -0.06501              -0.05694
+b_foot_R4                          -0.10448              -0.05329
+b_foot_R5                          -0.08557              -0.03880
+b_foot_R6                          -0.15365              -0.05487
+b_asc_TC                           -0.22329              -0.38073
+b_asc_TR                           -0.37823              -0.29775
+b_asc_BL                           -0.38720              -0.31950
+b_asc_BC                           -0.22152              -0.18522
+b_asc_BR                           -0.67759              -0.32226
+                      b_player_position_ST3 b_player_position_ST4
+b_player_position_MF2               0.33643               0.36980
+b_player_position_MF3               0.66368               0.42742
+b_player_position_MF4               0.39238               0.73157
+b_player_position_MF5               0.24273               0.27017
+b_player_position_MF6               0.44506               0.49537
+b_player_position_ST2               0.43241               0.47514
+b_player_position_ST3               1.00000               0.55978
+b_player_position_ST4               0.55978               1.00000
+b_player_position_ST5               0.30395               0.33868
+b_player_position_ST6               0.56019               0.62420
+b_foot_R2                          -0.02249              -0.02225
+b_foot_R3                          -0.12435              -0.04445
+b_foot_R4                          -0.07878              -0.12375
+b_foot_R5                          -0.05750              -0.06572
+b_foot_R6                          -0.08130              -0.09293
+b_asc_TC                           -0.21558              -0.23916
+b_asc_TR                           -0.59123              -0.40381
+b_asc_BL                           -0.36893              -0.70763
+b_asc_BC                           -0.21387              -0.23748
+b_asc_BR                           -0.37212              -0.41320
+                      b_player_position_ST5 b_player_position_ST6
+b_player_position_MF2               0.20044               0.36943
+b_player_position_MF3               0.23284               0.42914
+b_player_position_MF4               0.23790               0.43847
+b_player_position_MF5               0.87375               0.27139
+b_player_position_MF6               0.26999               0.82986
+b_player_position_ST2               0.25799               0.47549
+b_player_position_ST3               0.30395               0.56019
+b_player_position_ST4               0.33868               0.62420
+b_player_position_ST5               1.00000               0.33903
+b_player_position_ST6               0.33903               1.00000
+b_foot_R2                          -0.01184              -0.02181
+b_foot_R3                          -0.02392              -0.04408
+b_foot_R4                          -0.04861              -0.08959
+b_foot_R5                          -0.10063              -0.06632
+b_foot_R6                          -0.05088              -0.11658
+b_asc_TC                           -0.12999              -0.23958
+b_asc_TR                           -0.21969              -0.40489
+b_asc_BL                           -0.22288              -0.41078
+b_asc_BC                           -0.83289              -0.23784
+b_asc_BR                           -0.22453              -0.71928
+                                  b_foot_R2             b_foot_R3
+b_player_position_MF2              -0.12751              -0.07245
+b_player_position_MF3              -0.03326              -0.17417
+b_player_position_MF4              -0.03017              -0.05781
+b_player_position_MF5              -0.01832              -0.03545
+b_player_position_MF6              -0.03358              -0.06501
+b_player_position_ST2              -0.09994              -0.05694
+b_player_position_ST3              -0.02249              -0.12435
+b_player_position_ST4              -0.02225              -0.04445
+b_player_position_ST5              -0.01184              -0.02392
+b_player_position_ST6              -0.02181              -0.04408
+b_foot_R2                           1.00000               0.30204
+b_foot_R3                           0.30204               1.00000
+b_foot_R4                           0.35417               0.61631
+b_foot_R5                           0.25844               0.45157
+b_foot_R6                           0.36544               0.63854
+b_asc_TC                           -0.83030              -0.21551
+b_asc_TR                           -0.21188              -0.59034
+b_asc_BL                           -0.21552              -0.37007
+b_asc_BC                           -0.12414              -0.21374
+b_asc_BR                           -0.21599              -0.37189
+                                  b_foot_R4             b_foot_R5
+b_player_position_MF2              -0.07690              -0.05318
+b_player_position_MF3              -0.08842              -0.07152
+b_player_position_MF4              -0.13534              -0.07473
+b_player_position_MF5              -0.05698              -0.13975
+b_player_position_MF6              -0.10448              -0.08557
+b_player_position_ST2              -0.05329              -0.03880
+b_player_position_ST3              -0.07878              -0.05750
+b_player_position_ST4              -0.12375              -0.06572
+b_player_position_ST5              -0.04861              -0.10063
+b_player_position_ST6              -0.08959              -0.06632
+b_foot_R2                           0.35417               0.25844
+b_foot_R3                           0.61631               0.45157
+b_foot_R4                           1.00000               0.56969
+b_foot_R5                           0.56969               1.00000
+b_foot_R6                           0.80555               0.59657
+b_asc_TC                           -0.25822              -0.18909
+b_asc_TR                           -0.41229              -0.29997
+b_asc_BL                           -0.53175              -0.32095
+b_asc_BC                           -0.25470              -0.37225
+b_asc_BR                           -0.44315              -0.32496
+                                  b_foot_R6              b_asc_TC
+b_player_position_MF2              -0.07520               -0.3384
+b_player_position_MF3              -0.10114               -0.1941
+b_player_position_MF4              -0.10567               -0.1965
+b_player_position_MF5              -0.06599               -0.1218
+b_player_position_MF6              -0.15365               -0.2233
+b_player_position_ST2              -0.05487               -0.3807
+b_player_position_ST3              -0.08130               -0.2156
+b_player_position_ST4              -0.09293               -0.2392
+b_player_position_ST5              -0.05088               -0.1300
+b_player_position_ST6              -0.11658               -0.2396
+b_foot_R2                           0.36544               -0.8303
+b_foot_R3                           0.63854               -0.2155
+b_foot_R4                           0.80555               -0.2582
+b_foot_R5                           0.59657               -0.1891
+b_foot_R6                           1.00000               -0.2674
+b_asc_TC                           -0.26738                1.0000
+b_asc_TR                           -0.42417                0.3774
+b_asc_BL                           -0.45383                0.3936
+b_asc_BC                           -0.26409                0.2277
+b_asc_BR                           -0.52125                0.3962
+                                   b_asc_TR              b_asc_BL
+b_player_position_MF2               -0.2726               -0.2912
+b_player_position_MF3               -0.5233               -0.3357
+b_player_position_MF4               -0.3325               -0.5897
+b_player_position_MF5               -0.2063               -0.2112
+b_player_position_MF6               -0.3782               -0.3872
+b_player_position_ST2               -0.2977               -0.3195
+b_player_position_ST3               -0.5912               -0.3689
+b_player_position_ST4               -0.4038               -0.7076
+b_player_position_ST5               -0.2197               -0.2229
+b_player_position_ST6               -0.4049               -0.4108
+b_foot_R2                           -0.2119               -0.2155
+b_foot_R3                           -0.5903               -0.3701
+b_foot_R4                           -0.4123               -0.5317
+b_foot_R5                           -0.3000               -0.3209
+b_foot_R6                           -0.4242               -0.4538
+b_asc_TC                             0.3774                0.3936
+b_asc_TR                             1.0000                0.6478
+b_asc_BL                             0.6478                1.0000
+b_asc_BC                             0.3742                0.3897
+b_asc_BR                             0.6510                0.6780
+                                   b_asc_BC              b_asc_BR
+b_player_position_MF2               -0.1698               -0.2954
+b_player_position_MF3               -0.1924               -0.3347
+b_player_position_MF4               -0.1951               -0.3394
+b_player_position_MF5               -0.7975               -0.2102
+b_player_position_MF6               -0.2215               -0.6776
+b_player_position_ST2               -0.1852               -0.3223
+b_player_position_ST3               -0.2139               -0.3721
+b_player_position_ST4               -0.2375               -0.4132
+b_player_position_ST5               -0.8329               -0.2245
+b_player_position_ST6               -0.2378               -0.7193
+b_foot_R2                           -0.1241               -0.2160
+b_foot_R3                           -0.2137               -0.3719
+b_foot_R4                           -0.2547               -0.4431
+b_foot_R5                           -0.3722               -0.3250
+b_foot_R6                           -0.2641               -0.5213
+b_asc_TC                             0.2277                0.3962
+b_asc_TR                             0.3742                0.6510
+b_asc_BL                             0.3897                0.6780
+b_asc_BC                             1.0000                0.3924
+b_asc_BR                             0.3924                1.0000
+
+Robust correlation matrix:
+                      b_player_position_MF2 b_player_position_MF3
+b_player_position_MF2                1.0000                0.9315
+b_player_position_MF3                0.9315                1.0000
+b_player_position_MF4                0.8843                0.8663
+b_player_position_MF5                0.8842                0.9330
+b_player_position_MF6                0.8778                0.8818
+b_player_position_ST2                0.9801                0.9454
+b_player_position_ST3                0.9176                0.9943
+b_player_position_ST4                0.8732                0.8599
+b_player_position_ST5                0.8424                0.9070
+b_player_position_ST6                0.8736                0.8834
+b_foot_R2                            0.5423                0.4794
+b_foot_R3                            0.6784                0.5933
+b_foot_R4                            0.6483                0.5840
+b_foot_R5                            0.6560                0.5786
+b_foot_R6                            0.7044                0.6338
+b_asc_TC                            -0.8680               -0.8118
+b_asc_TR                            -0.9001               -0.8996
+b_asc_BL                            -0.7999               -0.7637
+b_asc_BC                            -0.8536               -0.8542
+b_asc_BR                            -0.9118               -0.8914
+                      b_player_position_MF4 b_player_position_MF5
+b_player_position_MF2                0.8843                0.8842
+b_player_position_MF3                0.8663                0.9330
+b_player_position_MF4                1.0000                0.8436
+b_player_position_MF5                0.8436                1.0000
+b_player_position_MF6                0.7019                0.8655
+b_player_position_ST2                0.9151                0.9048
+b_player_position_ST3                0.8629                0.9294
+b_player_position_ST4                0.9983                0.8381
+b_player_position_ST5                0.8298                0.9810
+b_player_position_ST6                0.7062                0.8679
+b_foot_R2                            0.7613                0.4741
+b_foot_R3                            0.8473                0.6315
+b_foot_R4                            0.8971                0.6069
+b_foot_R5                            0.8781                0.6114
+b_foot_R6                            0.9041                0.6586
+b_asc_TC                            -0.9327               -0.7801
+b_asc_TR                            -0.9637               -0.8806
+b_asc_BL                            -0.9799               -0.7605
+b_asc_BC                            -0.9439               -0.9168
+b_asc_BR                            -0.8615               -0.8896
+                      b_player_position_MF6 b_player_position_ST2
+b_player_position_MF2                0.8778                0.9801
+b_player_position_MF3                0.8818                0.9454
+b_player_position_MF4                0.7019                0.9151
+b_player_position_MF5                0.8655                0.9048
+b_player_position_MF6                1.0000                0.8962
+b_player_position_ST2                0.8962                1.0000
+b_player_position_ST3                0.8688                0.9419
+b_player_position_ST4                0.6913                0.9101
+b_player_position_ST5                0.8299                0.8847
+b_player_position_ST6                0.9990                0.8986
+b_foot_R2                            0.3660                0.6051
+b_foot_R3                            0.5333                0.7373
+b_foot_R4                            0.4368                0.7046
+b_foot_R5                            0.4806                0.7133
+b_foot_R6                            0.5436                0.7632
+b_asc_TC                            -0.7239               -0.9056
+b_asc_TR                            -0.7909               -0.9447
+b_asc_BL                            -0.6027               -0.8452
+b_asc_BC                            -0.7669               -0.9025
+b_asc_BR                            -0.9467               -0.9517
+                      b_player_position_ST3 b_player_position_ST4
+b_player_position_MF2                0.9176                0.8732
+b_player_position_MF3                0.9943                0.8599
+b_player_position_MF4                0.8629                0.9983
+b_player_position_MF5                0.9294                0.8381
+b_player_position_MF6                0.8688                0.6913
+b_player_position_ST2                0.9419                0.9101
+b_player_position_ST3                1.0000                0.8596
+b_player_position_ST4                0.8596                1.0000
+b_player_position_ST5                0.9160                0.8312
+b_player_position_ST6                0.8737                0.6975
+b_foot_R2                            0.4793                0.7730
+b_foot_R3                            0.6012                0.8557
+b_foot_R4                            0.5862                0.9028
+b_foot_R5                            0.5764                0.8824
+b_foot_R6                            0.6349                0.9088
+b_asc_TC                            -0.8067               -0.9346
+b_asc_TR                            -0.9053               -0.9652
+b_asc_BL                            -0.7636               -0.9826
+b_asc_BC                            -0.8545               -0.9447
+b_asc_BR                            -0.8836               -0.8561
+                      b_player_position_ST5 b_player_position_ST6
+b_player_position_MF2                0.8424                0.8736
+b_player_position_MF3                0.9070                0.8834
+b_player_position_MF4                0.8298                0.7062
+b_player_position_MF5                0.9810                0.8679
+b_player_position_MF6                0.8299                0.9990
+b_player_position_ST2                0.8847                0.8986
+b_player_position_ST3                0.9160                0.8737
+b_player_position_ST4                0.8312                0.6975
+b_player_position_ST5                1.0000                0.8394
+b_player_position_ST6                0.8394                1.0000
+b_foot_R2                            0.4922                0.3801
+b_foot_R3                            0.6421                0.5450
+b_foot_R4                            0.6168                0.4462
+b_foot_R5                            0.6207                0.4891
+b_foot_R6                            0.6651                0.5529
+b_asc_TC                            -0.7727               -0.7315
+b_asc_TR                            -0.8758               -0.7991
+b_asc_BL                            -0.7588               -0.6099
+b_asc_BC                            -0.9231               -0.7750
+b_asc_BR                            -0.8690               -0.9503
+                                  b_foot_R2             b_foot_R3
+b_player_position_MF2                0.5423                0.6784
+b_player_position_MF3                0.4794                0.5933
+b_player_position_MF4                0.7613                0.8473
+b_player_position_MF5                0.4741                0.6315
+b_player_position_MF6                0.3660                0.5333
+b_player_position_ST2                0.6051                0.7373
+b_player_position_ST3                0.4793                0.6012
+b_player_position_ST4                0.7730                0.8557
+b_player_position_ST5                0.4922                0.6421
+b_player_position_ST6                0.3801                0.5450
+b_foot_R2                            1.0000                0.8633
+b_foot_R3                            0.8633                1.0000
+b_foot_R4                            0.8749                0.9401
+b_foot_R5                            0.8609                0.9434
+b_foot_R6                            0.8678                0.9587
+b_asc_TC                            -0.8821               -0.8715
+b_asc_TR                            -0.7436               -0.8820
+b_asc_BL                            -0.8340               -0.9111
+b_asc_BC                            -0.7142               -0.8519
+b_asc_BR                            -0.6041               -0.7608
+                                  b_foot_R4             b_foot_R5
+b_player_position_MF2                0.6483                0.6560
+b_player_position_MF3                0.5840                0.5786
+b_player_position_MF4                0.8971                0.8781
+b_player_position_MF5                0.6069                0.6114
+b_player_position_MF6                0.4368                0.4806
+b_player_position_ST2                0.7046                0.7133
+b_player_position_ST3                0.5862                0.5764
+b_player_position_ST4                0.9028                0.8824
+b_player_position_ST5                0.6168                0.6207
+b_player_position_ST6                0.4462                0.4891
+b_foot_R2                            0.8749                0.8609
+b_foot_R3                            0.9401                0.9434
+b_foot_R4                            1.0000                0.9845
+b_foot_R5                            0.9845                1.0000
+b_foot_R6                            0.9868                0.9851
+b_asc_TC                            -0.8591               -0.8575
+b_asc_TR                            -0.8528               -0.8492
+b_asc_BL                            -0.9665               -0.9490
+b_asc_BC                            -0.8561               -0.8692
+b_asc_BR                            -0.6996               -0.7324
+                                  b_foot_R6              b_asc_TC
+b_player_position_MF2                0.7044               -0.8680
+b_player_position_MF3                0.6338               -0.8118
+b_player_position_MF4                0.9041               -0.9327
+b_player_position_MF5                0.6586               -0.7801
+b_player_position_MF6                0.5436               -0.7239
+b_player_position_ST2                0.7632               -0.9056
+b_player_position_ST3                0.6349               -0.8067
+b_player_position_ST4                0.9088               -0.9346
+b_player_position_ST5                0.6651               -0.7727
+b_player_position_ST6                0.5529               -0.7315
+b_foot_R2                            0.8678               -0.8821
+b_foot_R3                            0.9587               -0.8715
+b_foot_R4                            0.9868               -0.8591
+b_foot_R5                            0.9851               -0.8575
+b_foot_R6                            1.0000               -0.8906
+b_asc_TC                            -0.8906                1.0000
+b_asc_TR                            -0.8898                0.9392
+b_asc_BL                            -0.9651                0.9254
+b_asc_BC                            -0.8893                0.8972
+b_asc_BR                            -0.7842                0.8747
+                                   b_asc_TR              b_asc_BL
+b_player_position_MF2               -0.9001               -0.7999
+b_player_position_MF3               -0.8996               -0.7637
+b_player_position_MF4               -0.9637               -0.9799
+b_player_position_MF5               -0.8806               -0.7605
+b_player_position_MF6               -0.7909               -0.6027
+b_player_position_ST2               -0.9447               -0.8452
+b_player_position_ST3               -0.9053               -0.7636
+b_player_position_ST4               -0.9652               -0.9826
+b_player_position_ST5               -0.8758               -0.7588
+b_player_position_ST6               -0.7991               -0.6099
+b_foot_R2                           -0.7436               -0.8340
+b_foot_R3                           -0.8820               -0.9111
+b_foot_R4                           -0.8528               -0.9665
+b_foot_R5                           -0.8492               -0.9490
+b_foot_R6                           -0.8898               -0.9651
+b_asc_TC                             0.9392                0.9254
+b_asc_TR                             1.0000                0.9405
+b_asc_BL                             0.9405                1.0000
+b_asc_BC                             0.9585                0.9310
+b_asc_BR                             0.9241                0.8129
+                                   b_asc_BC              b_asc_BR
+b_player_position_MF2               -0.8536               -0.9118
+b_player_position_MF3               -0.8542               -0.8914
+b_player_position_MF4               -0.9439               -0.8615
+b_player_position_MF5               -0.9168               -0.8896
+b_player_position_MF6               -0.7669               -0.9467
+b_player_position_ST2               -0.9025               -0.9517
+b_player_position_ST3               -0.8545               -0.8836
+b_player_position_ST4               -0.9447               -0.8561
+b_player_position_ST5               -0.9231               -0.8690
+b_player_position_ST6               -0.7750               -0.9503
+b_foot_R2                           -0.7142               -0.6041
+b_foot_R3                           -0.8519               -0.7608
+b_foot_R4                           -0.8561               -0.6996
+b_foot_R5                           -0.8692               -0.7324
+b_foot_R6                           -0.8893               -0.7842
+b_asc_TC                             0.8972                0.8747
+b_asc_TR                             0.9585                0.9241
+b_asc_BL                             0.9310                0.8129
+b_asc_BC                             1.0000                0.9077
+b_asc_BR                             0.9077                1.0000
+
+ 20 worst outliers in terms of lowest average per choice prediction:
+  ID Avg prob per choice
+ 432          0.02874648
+  46          0.04527046
+ 293          0.04527046
+ 396          0.04527046
+ 104          0.04728563
+ 204          0.04728563
+ 290          0.04728563
+ 284          0.05358656
+  75          0.05620257
+  77          0.05620257
+ 102          0.05620257
+ 167          0.05620257
+ 330          0.05620257
+ 399          0.05620257
+ 466          0.05620257
+ 478          0.05620257
+ 143          0.06114749
+ 170          0.06114749
+ 226          0.06114749
+ 315          0.06114749
+
+Changes in parameter estimates from starting values:
+                          Initial    Estimate  Difference
+b_player_position_MF2       0.000    -0.68576    -0.68576
+b_player_position_MF3       0.000    -0.34492    -0.34492
+b_player_position_MF4       0.000    -0.14907    -0.14907
+b_player_position_MF5       0.000     0.48368     0.48368
+b_player_position_MF6       0.000     0.07892     0.07892
+b_player_position_ST2       0.000    -0.28007    -0.28007
+b_player_position_ST3       0.000    -0.02301    -0.02301
+b_player_position_ST4       0.000     0.32257     0.32257
+b_player_position_ST5       0.000     0.60712     0.60712
+b_player_position_ST6       0.000     0.35445     0.35445
+b_foot_R2                   0.000     0.29608     0.29608
+b_foot_R3                   0.000    -1.02284    -1.02284
+b_foot_R4                   0.000    -0.06980    -0.06980
+b_foot_R5                   0.000    -0.39602    -0.39602
+b_foot_R6                   0.000    -0.64761    -0.64761
+b_asc_TC                    0.000    -0.43777    -0.43777
+b_asc_TR                    0.000     0.77054     0.77054
+b_asc_BL                    0.000     1.24804     1.24804
+b_asc_BC                    0.000    -0.56286    -0.56286
+b_asc_BR                    0.000     1.43173     1.43173
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                           
+modelName              "Model 2"                       
+modelDescr             "Player position and foot model"
+indivID                "ID"                            
+outputDirectory        "Model_Output/Model 2/"         
+debug                  "FALSE"                         
+nCores                 "1"                             
+workInLogs             "FALSE"                         
+seed                   "13"                            
+mixing                 "FALSE"                         
+HB                     "FALSE"                         
+noValidation           "FALSE"                         
+noDiagnostics          "FALSE"                         
+calculateLLC           "TRUE"                          
+panelData              "TRUE"                          
+analyticGrad           "TRUE"                          
+analyticGrad_manualSet "FALSE"                         
+overridePanel          "FALSE"                         
+preventOverridePanel   "FALSE"                         
+noModification         "FALSE"                         
+
+Hessian routines attempted
+--------------------------
+numerical second derivative of LL (using numDeriv)
+
+Scaling used in computing Hessian
+---------------------------------
+                           Value
+b_player_position_MF2 0.68575569
+b_player_position_MF3 0.34492434
+b_player_position_MF4 0.14907017
+b_player_position_MF5 0.48367774
+b_player_position_MF6 0.07892004
+b_player_position_ST2 0.28007378
+b_player_position_ST3 0.02300888
+b_player_position_ST4 0.32257285
+b_player_position_ST5 0.60712498
+b_player_position_ST6 0.35445259
+b_foot_R2             0.29608228
+b_foot_R3             1.02283571
+b_foot_R4             0.06979610
+b_foot_R5             0.39601648
+b_foot_R6             0.64761042
+b_asc_TC              0.43777001
+b_asc_TR              0.77053733
+b_asc_BL              1.24804258
+b_asc_BC              0.56286182
+b_asc_BR              1.43173495
+
+
+apollo_probabilities
+----------------------
+function(apollo_beta, apollo_inputs, functionality="estimate"){
+        apollo_attach(apollo_beta, apollo_inputs)			 ### Attach inputs and detach after
+        on.exit(apollo_detach(apollo_beta, apollo_inputs))		 ### function exit
+        
+        P = list()								 ### Create list of probabilities P
+        
+        V = list()								 ### List of utilities
+        
+        # Add choice make characteristics
+        for(j in 1:length(unique(Choice))){
+            if (j==1){
+                V[[paste0("alt_", choice_map[j])]] = 0
+            } else {
+                V[[paste0("alt_", choice_map[j])]] = get(paste0("b_asc_", choice_map[j]))
+                for(k in 1:length(K)) {
+                    if (substr(K[k], 0, nchar(K[k])-1) %in% numerical_cols) {
+                        V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+                            get(paste0("b_", K[k]))*get(substr(K[k], 0, nchar(K[k])-1))}
+                    else if (substrRight(K[k], 1) == j){
+                        V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+                            get(paste0("b_", K[k]))*get(sub(j, "", K[k]))} 
+                }
+            }
+        }
+        
+        mnl_settings = list(						       ### Define settings for model 
+            alternatives = c(alt_TL=1, alt_TC=2, alt_TR=3, alt_BL=4, alt_BC=5, alt_BR=6),					 ### component
+            avail        = 1,
+            choiceVar    = Choice,
+            V            = V)
+        
+        P[["model"]] = apollo_mnl(mnl_settings, functionality)	 ### Compute probabilities using model
+        
+        P = apollo_panelProd(P, apollo_inputs, functionality)	 ### Take product across observation
+        ### for same ID
+        
+        P = apollo_prepareProb(P, apollo_inputs, functionality)	 ### Prepare and return outputs of function
+        
+        return(P)
+    }
