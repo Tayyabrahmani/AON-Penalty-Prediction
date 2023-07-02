@@ -7,21 +7,21 @@ library(dplyr)
 library(apollo)							# run apollo package
 apollo_initialise()
 
+substrRight <- function(x, n){
+  substr(x, nchar(x)-n+1, nchar(x))
+}
+
 database <- read_excel("SixAlt.xlsx")
 database <- as.data.frame(database)
 database = rename(database, "player_position" = "player position", "gk_stand" = "GK Stand", "sort_of_movement" = "Sort of Movement",
 "competition_grouped" = "competition grouped", "Importantness_Game" = "Importantness Game", "lead_deficit" = "Lead-Deficit", "minute_pars" = "Minute Pars",
 "location" = "Location (H-A-N)", "Penalty_type" = "Ingame-Shootout?", "decider" = "Decider?", "shot_hard" = "Schuss hart ja nein",
-"greak_gk" = "Great GK?")
+"greak_gk" = "Great GK?", "round_number" = "Round Number")
 
-cols_to_select = c("player_position", "foot", "shot_hard")
-cols_to_remove = c("player_position_GK", "foot_L", "shot_hard_no")
+cols_to_select = c("location", "round_number")
+cols_to_remove = c("location_N", "round_number_-")
 
-# calculate the mode of the "shot_hard" column
-mode_val <- names(which.max(table(database$shot_hard)))
-
-# replace the missing values with the mode
-database <- database %>% mutate(shot_hard = ifelse(is.na(shot_hard), mode_val, shot_hard))
+cols_with_same_beta = c("NONE")
 
 # apply string replacement to selected columns
 database <- database %>%
@@ -48,13 +48,17 @@ choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
 
 #Define name and starting values for the coefficients to be estimated
 K <- grep(paste(cols_to_select, collapse = "|"), names(database), value=TRUE)
+n <- 6
+cols_with_same_beta <- grep(paste(cols_with_same_beta, collapse = "|"), names(database), value=TRUE)
+K <- setdiff(K, cols_with_same_beta)
+K <- paste0(rep(K, each = n-1), rep(2:n, times = length(K)))
+K = c(K, cols_with_same_beta)
 apollo_beta_constants = paste0("asc_", choice_map[sort(unique(database$Choice))[-1]])
 apollo_beta_constants <- c(K, apollo_beta_constants)
 apollo_beta = setNames(rep(0,length(apollo_beta_constants)),paste0("b_", apollo_beta_constants))
 
 #all coefficients may be altered, none is fixed
 apollo_fixed=c()
-
 
 #check if you have defined everything necessary 
 apollo_inputs = apollo_validateInputs()
@@ -73,11 +77,16 @@ apollo_probabilities=function(apollo_beta, apollo_inputs, functionality="estimat
       V[[paste0("alt_", choice_map[j])]] = 0
     } else {
       V[[paste0("alt_", choice_map[j])]] = get(paste0("b_asc_", choice_map[j]))
-        for(k in 1:length(K)) {V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
-          get(paste0("b_", K[k]))*get(paste0(K[k]))}
+        for(k in 1:length(K)) {
+            if (K[k] %in% cols_with_same_beta) {
+            V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+          get(paste0("b_", K[k]))*get(K[k])}
+            else if (substrRight(K[k], 1) == j){
+            V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+          get(paste0("b_", K[k]))*get(sub(j, "", K[k]))} 
+            }
       }
   }
-  
   mnl_settings = list(						       ### Define settings for model 
     alternatives = c(alt_TL=1, alt_TC=2, alt_TR=3, alt_BL=4, alt_BC=5, alt_BR=6),					 ### component
     avail        = 1,
@@ -102,8 +111,6 @@ BaseSpec = apollo_estimate(apollo_beta,
 
 apollo_modelOutput(BaseSpec)
 
-L<-NULL
-L[[1]]<-BaseSpec
-
+L[[2]]<-BaseSpec
 
 Modelnames<-c("test1")

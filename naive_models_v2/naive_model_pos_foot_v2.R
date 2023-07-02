@@ -48,13 +48,14 @@ choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
 
 #Define name and starting values for the coefficients to be estimated
 K <- grep(paste(cols_to_select, collapse = "|"), names(database), value=TRUE)
+n <- 6
+K <- paste0(rep(K, each = n-1), rep(2:n, times = length(K)))
 apollo_beta_constants = paste0("asc_", choice_map[sort(unique(database$Choice))[-1]])
 apollo_beta_constants <- c(K, apollo_beta_constants)
 apollo_beta = setNames(rep(0,length(apollo_beta_constants)),paste0("b_", apollo_beta_constants))
 
 #all coefficients may be altered, none is fixed
 apollo_fixed=c()
-
 
 #check if you have defined everything necessary 
 apollo_inputs = apollo_validateInputs()
@@ -73,8 +74,11 @@ apollo_probabilities=function(apollo_beta, apollo_inputs, functionality="estimat
       V[[paste0("alt_", choice_map[j])]] = 0
     } else {
       V[[paste0("alt_", choice_map[j])]] = get(paste0("b_asc_", choice_map[j]))
-        for(k in 1:length(K)) {V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
-          get(paste0("b_", K[k]))*get(paste0(K[k]))}
+        for(k in 1:length(K)) {
+            if (grepl(j, K[k])) {
+            V[[paste0("alt_", choice_map[j])]] = V[[paste0("alt_", choice_map[j])]] +
+          get(paste0("b_", K[k]))*get(gsub(j, "", K[k]))}
+            }
       }
   }
   
@@ -102,8 +106,7 @@ BaseSpec = apollo_estimate(apollo_beta,
 
 apollo_modelOutput(BaseSpec)
 
-L<-NULL
-L[[1]]<-BaseSpec
+L[[2]]<-BaseSpec
 
 
 Modelnames<-c("test1")

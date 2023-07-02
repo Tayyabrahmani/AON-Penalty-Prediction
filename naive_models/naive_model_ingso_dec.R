@@ -9,10 +9,13 @@ apollo_initialise()
 
 database <- read_excel("SixAlt.xlsx")
 database <- as.data.frame(database)
-# database = rename(database, "player_position" = "player position")
+database = rename(database, "player_position" = "player position", "gk_stand" = "GK Stand", "sort_of_movement" = "Sort of Movement",
+"competition_grouped" = "competition grouped", "Importantness_Game" = "Importantness Game", "lead_deficit" = "Lead-Deficit", "minute_pars" = "Minute Pars",
+"location" = "Location (H-A-N)", "Penalty_type" = "Ingame-Shootout?", "decider" = "Decider?", "shot_hard" = "Schuss hart ja nein",
+"greak_gk" = "Great GK?")
 
-cols_to_select = c("Schusshärte")
-cols_to_remove = c("Schusshärte_NA")
+cols_to_select = c("Penalty_type", "decider")
+cols_to_remove = c("Penalty_type_Ingame", "decider_no")
 
 # apply string replacement to selected columns
 database <- database %>%

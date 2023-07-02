@@ -12,16 +12,10 @@ database <- as.data.frame(database)
 database = rename(database, "player_position" = "player position", "gk_stand" = "GK Stand", "sort_of_movement" = "Sort of Movement",
 "competition_grouped" = "competition grouped", "Importantness_Game" = "Importantness Game", "lead_deficit" = "Lead-Deficit", "minute_pars" = "Minute Pars",
 "location" = "Location (H-A-N)", "Penalty_type" = "Ingame-Shootout?", "decider" = "Decider?", "shot_hard" = "Schuss hart ja nein",
-"greak_gk" = "Great GK?")
+"greak_gk" = "Great GK?", "height_gk_grouped" = "Height GK grouped")
 
-cols_to_select = c("player_position", "foot", "shot_hard")
-cols_to_remove = c("player_position_GK", "foot_L", "shot_hard_no")
-
-# calculate the mode of the "shot_hard" column
-mode_val <- names(which.max(table(database$shot_hard)))
-
-# replace the missing values with the mode
-database <- database %>% mutate(shot_hard = ifelse(is.na(shot_hard), mode_val, shot_hard))
+cols_to_select = c("greak_gk", "height_gk_grouped")
+cols_to_remove = c("greak_gk_no", "height_gk_grouped_u183")
 
 # apply string replacement to selected columns
 database <- database %>%
@@ -30,7 +24,7 @@ database <- database %>%
 # Create dummy variable
 database <- dummy_cols(database,
                        select_columns = c(cols_to_select),
-                       remove_first_dummy = FALSE,
+                       remove_first_dummy = FALSE, 
                        remove_selected_columns = TRUE)
 
 # Columns to be removed
@@ -40,7 +34,7 @@ if(length(cols_to_remove) > 0) {
 
 #set some controls
 apollo_control=list(modelName="Naive Model PSP",
-                    modelDescr="Player position and foot model", indivID="ID")
+                    modelDescr="GK Stand and sort of movement model", indivID="ID")
 
 
 # Choice mapping
