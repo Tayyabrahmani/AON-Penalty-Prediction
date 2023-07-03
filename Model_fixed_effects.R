@@ -18,7 +18,7 @@ substrRight <- function(x, n){
 # numerical_cols = c("age", "height_gk", "lead_deficit", "weeks_since_last_penalty")
 
 categorical_cols = c("consider_fe", "player_position", "foot", "round", "competition_grouped", "Penalty_type",
-                     "minute_pars", "shot_hard", "ball_placed", "gk_stand", "tapped_the_ball")
+                     "shot_hard", "ball_placed", "gk_stand", "tapped_the_ball")
 
 numerical_cols = c()
 
@@ -126,7 +126,7 @@ cols_to_select = c(categorical_cols, numerical_cols)
 database = process_database3(database, cols_reference)
 
 #set some controls
-apollo_control=list(modelName = "Final Model",
+apollo_control=list(modelName = "Model without Fixed effects",
                     modelDescr = "Player position and foot model", indivID="ID")
 
 # apollo_control=list(modelName = paste(cols_to_select, collapse = ','),

@@ -83,6 +83,8 @@ if(length(cols_to_remove) > 0) {
 
 list_cols_to_select <- lapply(seq_along(cols_to_select), function(i) cols_to_select[1:i])
 
+list_cols_to_select = list_cols_to_select[7:19]
+
 for(cols_to_select in list_cols_to_select)
 {  #set some controls
   dir.create(paste("Model_Output/Model", length(cols_to_select)))
@@ -154,8 +156,7 @@ for(cols_to_select in list_cols_to_select)
   BaseSpec = apollo_estimate(apollo_beta,
                             apollo_fixed,
                             apollo_probabilities,
-                            apollo_inputs,
-                            estimate_settings = list(maxIterations=100))
+                            apollo_inputs)
 
   apollo_modelOutput(BaseSpec)
   apollo_saveOutput(BaseSpec)
