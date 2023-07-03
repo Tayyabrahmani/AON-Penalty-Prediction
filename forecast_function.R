@@ -1,8 +1,4 @@
-
 forecastOutput <- function(model, database){
-  database = process_database2(database)
-  database = process_database3(database, cols_reference)
-
   probs <- setNames(rep(0, 6), c("prob1", "prob2", "prob3", "prob4", "prob5", "prob6"))
 
   for(i in names(model$estimate)){
@@ -59,5 +55,6 @@ forecastOutput <- function(model, database){
     }
   }
   sum_prob = sum(sapply(probs[c("prob1", "prob2", "prob3", "prob4", "prob5", "prob6")], exp))
-  return (names(which.max(exp(probs) / sum_prob)))
+  prob_map = c('prob1'= 'TL', 'prob2'= 'TC', 'prob3'= 'TR', 'prob4'= 'BL', 'prob5'= 'BC', 'prob6'= 'BR')
+  return (prob_map[names(which.max(exp(probs) / sum_prob))])
 }

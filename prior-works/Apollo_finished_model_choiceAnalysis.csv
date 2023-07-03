@@ -1,7 +1,0 @@
-"","TL","TC","TR","DL","DC","DR"
-"Explanator 1 (foot), mean when alt is chosen:",0.819,0.8485,0.6085,0.803,0.7578,0.7012
-"Explanator 1 (foot), mean when alt is not chosen:",0.7474,0.7489,0.7689,0.7257,0.7542,0.7789
-"Explanator 1 (foot), t-test (mean if chosen - mean if not chosen)",2.65,3.05,-4.61,4.35,0.1,-3.94
-"Explanator 2 (nmovGK), mean when alt is chosen:",1.7112,1.6288,1.6981,1.6424,1.677,1.6272
-"Explanator 2 (nmovGK), mean when alt is not chosen:",1.6444,1.6523,1.6463,1.6561,1.6491,1.6619
-"Explanator 2 (nmovGK), t-test (mean if chosen - mean if not chosen)",2.11,-0.52,1.52,-0.65,0.73,-1.57

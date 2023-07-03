@@ -6,19 +6,10 @@ library(readxl)
 library(dplyr)
 library(apollo)							# run apollo package
 apollo_initialise()
-
-substrRight <- function(x, n){
-  substr(x, nchar(x)-n+1, nchar(x))
-}
-
-# "consider_fe",
-# categorical_cols = c("player_position", "foot", "greak_gk", "location", "round", "competition_grouped", "Importantness_Game", "Penalty_type",
-#                      "minute_pars", "decider", "shot_hard", "ball_placed", "gk_stand", "sort_of_movement", "tapped_the_ball")
-
-# numerical_cols = c("age", "height_gk", "lead_deficit", "weeks_since_last_penalty")
+source("utils_func.R")
 
 categorical_cols = c("consider_fe", "player_position", "foot", "round", "competition_grouped", "Penalty_type",
-                     "shot_hard", "ball_placed", "gk_stand", "tapped_the_ball")
+                     "minute_pars", "shot_hard", "ball_placed", "gk_stand", "tapped_the_ball")
 
 numerical_cols = c()
 
@@ -35,82 +26,6 @@ replacement_map <- c('Final'= 'Final', 'Quarter-Final'= 'Quarter-Final', "2"= 'G
                      'Semi-Final'= 'Semi-Final', "3"= 'Group', "4"= 'Group', "1"= 'Group', 'last thirty-two'= 'Group', 'KO'= 'KO', "5"= 'Group',
                      'match place 3'= 'match place 3')
 
-# get_interaction_combinations <- function(data, column1, column2, cols_to_remove) {
-#   # Extract unique values from the specified columns
-#   unique_values1 <- unique(data[[column1]])
-#   unique_values2 <- unique(data[[column2]])
-  
-#   # Generate all combinations of the unique values
-#   combinations <- expand.grid(unique_values1, unique_values2)
-  
-#   # Convert the combinations to a vector
-#   combination_vector <- apply(combinations, 1, paste, collapse = "")
-  
-#   return(combination_vector)
-# }
-
-create_num_penalties <- function(database){
-  # Add the num of penalties and cumsum to the database
-  Num_penalties = database %>% 
-    group_by(Player) %>% 
-    summarize(Num_penalties = n()) %>%
-    arrange(desc(Num_penalties)) %>%
-    mutate(Percent = Num_penalties / sum(Num_penalties) * 100,
-          cum_Percent = cumsum(Percent),
-          consider_fe = ifelse(cum_Percent <= 81, Player, "nan"))
-  return(Num_penalties)
-}
-
-process_database <- function(database){
-  database <- as.data.frame(database)
-  database = rename(database, "player_position" = "player position", "foot" = "foot", "age" = "age", "greak_gk" = "Great GK?", "height_gk" = "Height of GK",
-  "location" = "Location (H-A-N)", "round" = "Round Number", "competition_grouped" = "competition grouped", "Importantness_Game" = "Importantness Game",
-  "Penalty_type" = "Ingame-Shootout?", "lead_deficit" = "Lead-Deficit", "minute_pars" = "Minute Pars", "decider" = "Decider?",
-  "shot_hard" = "Schuss hart ja nein", "ball_placed" = "Platziert?", "gk_stand" = "GK Stand", "sort_of_movement" = "Sort of Movement",
-  "tapped_the_ball" = "tapped the ball?", "weeks_since_last_penalty" = "in weeks")
-  return(database)
-}
-
-process_database2 <- function(database, Num_penalties){
-  database <- merge(database, Num_penalties[c('Player', 'consider_fe')], by.x="Player", by.y="Player")
-
-  # replace the missing values with the mode
-  database <- database %>% mutate(shot_hard = ifelse(is.na(shot_hard), mode_val, shot_hard), 
-                                  ball_placed = ifelse(is.na(ball_placed), mode_val, ball_placed)
-                                  )
-
-  # Replace values in the "Category" column
-  database$round <- replacement_map[database$round]
-
-  # Convert categorical columns to numeric columns
-  database[numerical_cols] <- sapply(database[numerical_cols], as.numeric)
-
-  # apply string replacement to selected columns
-  database <- database %>%
-    mutate(across(all_of(categorical_cols), ~ str_replace_all(., " ", "_")))
-
-  # # Convert the combinations to a vector
-  # combination_vector <- apply(combinations, 1, paste, collapse = "")
-
-  # Create dummy variable
-  database <- dummy_cols(database,
-                        select_columns = c(categorical_cols),
-                        remove_first_dummy = FALSE,
-                        remove_selected_columns = TRUE)
-  return(database)
-}
-
-process_database3 <- function(database, cols_reference){
-  # Columns to be removed
-  if(length(cols_reference) > 0) {
-    database <- database[, -which(names(database) %in% cols_reference)]
-  }
-  for(i in c("R_slightly_left", "R_slightly_right", "R_clearly_right", "R0", "R_clearly_left")){
-    database[paste("R_", sub("R_|R", "", i), sep="")] = database["foot_R"] * database[paste("gk_stand_", sub("R_|R", "", i), sep="")]
-    }
-  return(database)
-}
-
 # Load the database
 database <- read_excel("SixAlt.xlsx")
 database = process_database(database)
@@ -126,11 +41,8 @@ cols_to_select = c(categorical_cols, numerical_cols)
 database = process_database3(database, cols_reference)
 
 #set some controls
-apollo_control=list(modelName = "Model without Fixed effects",
+apollo_control=list(modelName = "Final Model",
                     modelDescr = "Player position and foot model", indivID="ID")
-
-# apollo_control=list(modelName = paste(cols_to_select, collapse = ','),
-#                     modelDescr = "Player position and foot model", indivID="ID")
 
 # Choice mapping
 choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
@@ -139,10 +51,7 @@ choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
 K <- grep(paste(cols_to_select, collapse = "|"), names(database), value=TRUE)
 n <- 6
 K = c(K, c("R_slightly_left", "R_slightly_right", "R_clearly_right", "R_0", "R_clearly_left"))
-# cols_with_same_beta <- grep(paste(cols_with_same_beta, collapse = "|"), names(database), value=TRUE)
-# K <- setdiff(K, cols_with_same_beta)
 K <- paste0(rep(K, each = n-1), rep(2:n, times = length(K)))
-# K = c(K, cols_with_same_beta)
 apollo_beta_constants = paste0("asc_", choice_map[sort(unique(database$Choice))[-1]])
 apollo_beta_constants <- c(K, apollo_beta_constants)
 apollo_beta = setNames(rep(0,length(apollo_beta_constants)),paste0("b_", apollo_beta_constants))
@@ -201,9 +110,3 @@ BaseSpec = apollo_estimate(apollo_beta,
 
 apollo_modelOutput(BaseSpec)
 apollo_saveOutput(BaseSpec)
-
-# L<-NULL
-# L[[1]]<-BaseSpec
-
-# for(i in seq(16, 21))
-# {print(apollo_lrTest(apollo_loadModel(paste("Model_Output/Model ", i,"/Model ", i, sep="")), apollo_loadModel(paste("Model_Output/Model ", i + 1,"/Model ", i + 1, sep=""))))}
