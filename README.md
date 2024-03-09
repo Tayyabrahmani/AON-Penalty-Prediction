@@ -25,6 +25,9 @@ forecast_function.R: Contains the forecast function in R
 5. After the model is built, run the **app.R** to launch the R Shiny app.
 6. The Shiny app will provide an interactive interface where you can input player information and shot locations to predict the outcome of a penalty shot.
 
+## Where to Find the App
+The R Shiny app can also be accessed online at [this link](https://tayyabrahmani.shinyapps.io/Penalty_Prediction/).
+
 ## Contributing
 We welcome contributions to improve the penalty shot prediction model and the Shiny app. Feel free to submit issues, open pull requests, or suggest enhancements.
 
