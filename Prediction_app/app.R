@@ -6,8 +6,8 @@ library(fastDummies)
 library(dplyr)
 library(apollo)
 library(shinyjs)
-source("forecast_function.R")
-source("utils_func.R")
+source("utils/forecast_function.R")
+source("utils/utils_func.R")
 
 replacement_map <- c('Final'= 'Final', 'Quarter-Final'= 'Quarter-Final', "2"= 'Group', '-'= '-', 'Group'= 'Group', 'last sixteen'= 'KO',
                      'Semi-Final'= 'Semi-Final', "3"= 'Group', "4"= 'Group', "1"= 'Group', 'last thirty-two'= 'Group', 'KO'= 'KO', "5"= 'Group',
@@ -182,8 +182,8 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   # Read the data from the Excel file
   data <- reactive({
-    req(file.exists("SixAlt.xlsx"))
-    database <- read_excel("SixAlt.xlsx")
+    req(file.exists("Input_data/SixAlt.xlsx"))
+    database <- read_excel("Input_data/SixAlt.xlsx")
     database = process_database(database)
     Num_penalties = create_num_penalties(database)
     mode_val <- names(which.max(table(database$shot_hard)))
@@ -241,7 +241,7 @@ server <- function(input, output, session) {
     }
     
     test_database = add_interactions(test_database)
-    prediction_model = apollo_loadModel("Final Model")
+    prediction_model = apollo_loadModel("Output/Final Model")
     kick_direction = forecastOutput(prediction_model, test_database)   
     return(kick_direction) 
   }

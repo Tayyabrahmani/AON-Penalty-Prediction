@@ -6,7 +6,7 @@ library(readxl)
 library(dplyr)
 library(apollo)							# run apollo package
 apollo_initialise()
-source("utils_func.R")
+source("utils/utils_func.R")
 
 categorical_cols = c("consider_fe", "player_position", "foot", "round", "competition_grouped", "Penalty_type",
                      "minute_pars", "shot_hard", "ball_placed", "gk_stand", "tapped_the_ball")
@@ -27,22 +27,25 @@ replacement_map <- c('Final'= 'Final', 'Quarter-Final'= 'Quarter-Final', "2"= 'G
                      'match place 3'= 'match place 3')
 
 # Load the database
-database <- read_excel("SixAlt.xlsx")
+database <- read_excel("Input_data/SixAlt.xlsx")
 database = process_database(database)
 Num_penalties = create_num_penalties(database)
 
 # calculate the mode of the "shot_hard" column
 mode_val <- names(which.max(table(database$shot_hard)))
 
-database = process_database2(database, Num_penalties)
+database = process_database2(database, Num_penalties, mode_val)
 
 # Concatenating categorical and numerical columns
 cols_to_select = c(categorical_cols, numerical_cols)
 database = process_database3(database, cols_reference)
 
+database = add_interactions(database)
+
 #set some controls
 apollo_control=list(modelName = "Final Model",
-                    modelDescr = "Player position and foot model", indivID="ID")
+                  modelDescr = "Player position and foot model", indivID="ID",
+                  outputDirectory="Output")
 
 # Choice mapping
 choice_map = c("1"="TL", "2"="TC", "3"="TR", "4"="BL", "5"="BC", "6"="BR")
