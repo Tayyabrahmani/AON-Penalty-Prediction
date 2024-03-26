@@ -14,7 +14,7 @@ forecast_function.R: Contains the forecast function in R
 ## How to Use
 1. Clone the repository to your local machine using the following command:
 ```
-  git clone https://github.com/your-username/penalty-shot-prediction.git
+  git clone https://github.com/tayyabrahmani/penalty-shot-prediction.git
 ```
 2. Open RStudio or your preferred R development environment.
 3. Install the required R packages if not already installed:
